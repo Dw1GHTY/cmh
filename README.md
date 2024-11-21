@@ -1,3 +1,3 @@
 # CMH - Complete Mobile Health
 
-Website for a drug testing service based in Wisconsin, USA
+Website for a company that provides drug testing services, based in Wisconsin, USA
