@@ -2,9 +2,7 @@ import React from "react";
 import NavLink from "./NavLink";
 import { Separator } from "../ui/separator";
 
-interface NavMenuProps {}
-
-const NavMenu: React.FC<NavMenuProps> = () => {
+const NavMenu: React.FC = () => {
   return (
     <div className=" hidden md:flex justify-center items-center mx-1 space-x-2">
       <NavLink name="Corporate Wellness Services" />
