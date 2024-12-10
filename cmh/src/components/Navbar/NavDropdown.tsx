@@ -25,8 +25,8 @@ const NavDropdown: React.FC<NavDropdownProps> = ({
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-fit bg-slate-200 border-2 space-y-1 border-green-700 rounded-sm">
         <DropdownMenuSeparator />
-        {dropDownLinks.map((link) => {
-          return <DropdownMenuItem>{link}</DropdownMenuItem>;
+        {dropDownLinks.map((link, index) => {
+          return <DropdownMenuItem key={index}>{link}</DropdownMenuItem>;
         })}
       </DropdownMenuContent>
     </DropdownMenu>

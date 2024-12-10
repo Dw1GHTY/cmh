@@ -2,9 +2,10 @@ import React from "react";
 import NavLink from "./NavLink";
 import { Separator } from "../ui/separator";
 import NavDropdown from "./NavDropdown";
+import { TLink } from "@/types/Link";
 
 interface NavMenuProps {
-  links?: Array<Link>;
+  links?: Array<TLink>;
 }
 
 const NavMenu: React.FC<NavMenuProps> = ({ links }) => {

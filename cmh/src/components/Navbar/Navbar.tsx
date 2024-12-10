@@ -3,12 +3,13 @@ import Logo from "../Logo";
 import NavMenu from "./NavMenu";
 import Contact from "../Contact";
 import NavMenuMobile from "./NavMenuMobile";
+import { TLink } from "@/types/Link";
 
 interface NavbarProps {
   styles: string;
 }
 
-const links: Array<Link> = [
+const links: Array<TLink> = [
   {
     name: "Corporate Health Services",
     sublinks: ["link1testestest", "link2", "link3"],
