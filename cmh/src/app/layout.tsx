@@ -16,11 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen bg-slate-200">
+      <body className="flex flex-col min-h-screen bg-slate-200 background-image">
         {/*//? styles attribute concat with classname */}
-        <Navbar styles="sticky top-0 z-10 flex justify-center items-center px-1 h-20 bg-green-500" />
+        <Navbar styles="sticky top-0 z-10 flex justify-center items-center h-20 bg-green-500" />
         <main className="flex flex-grow">{children}</main>
-        <Footer styles="flex flex-row bg-green-500 h-16" />
+        <Footer />
       </body>
     </html>
   );

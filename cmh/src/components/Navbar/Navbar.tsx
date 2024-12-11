@@ -12,7 +12,12 @@ interface NavbarProps {
 const links: Array<TLink> = [
   {
     name: "Corporate Health Services",
-    sublinks: ["link1testestest", "link2", "link3"],
+    sublinks: [
+      "Health Coaching Program",
+      "Biometric Screenings",
+      "Drug Testing Services",
+      "DNA Paternity Testing",
+    ],
   },
   { name: "Flu Shots" },
   { name: "Partnering" },
@@ -20,12 +25,15 @@ const links: Array<TLink> = [
 
 const Navbar: React.FC<NavbarProps> = ({ styles }) => {
   return (
-    <nav className={styles + ""}>
+    <nav className={styles + " backdrop-filter backdrop-blur-lg bg-opacity-35"}>
       <div className="flex justify-between w-full md:flex md:flex-row md:justify-center md:items-center md:w-5/6">
         <Logo />
         <NavMenu links={links} />
         <NavMenuMobile />
-        <Contact phoneNumber="00123123" email="example@email.com" />
+        <Contact
+          style="hidden md:flex md:ml-4 md:justify-center md:items-center"
+          email="Nickibenson@completemobile-health.com"
+        />
       </div>
     </nav>
   );

@@ -22,7 +22,13 @@ body {
 
 @layer base {
   :root {
-
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
+}
+
+.background-image {
+  background-image: url("/landing_page_bg.jpg");
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center center; /* Centers the image */
 }

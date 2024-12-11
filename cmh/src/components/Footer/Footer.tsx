@@ -1,14 +1,24 @@
 import React from "react";
 import Logo from "../Logo";
+import Contact from "../Contact";
+import Socials from "../Socials";
+import Legal from "./Legal";
 
-interface FooterProps {
-  styles: string;
-}
-
-const Footer: React.FC<FooterProps> = ({ styles }) => {
+const Footer: React.FC = () => {
   return (
-    <footer className={styles + "p-1"}>
+    <footer className="flex flex-col justify-center items-center md:flex-row  bg-green-500 h-fit first-letter:p-1 md:justify-between px-2">
       <Logo />
+      {/* //? Contact */}
+      <Contact
+        style="flex justify-center border-2 border-black items-center"
+        email="Nickibenson@completemobile-health.com"
+      />
+      {/* //? Socials */}
+      <Socials />
+      {/* //? InfoSection - multiple | with links or without */}
+
+      {/*//? Legal */}
+      <Legal text="Complete Mobile Health Ⓡ All Rights Reserved" />
     </footer>
   );
 };

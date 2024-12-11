@@ -19,7 +19,7 @@ const NavDropdown: React.FC<NavDropdownProps> = ({
 }) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex flex-row justify-center items-center size-fit rounded-md p-2 hover:bg-green-300 font-semibold">
+      <DropdownMenuTrigger className="flex flex-row justify-center items-center size-fit rounded-md p-2 hover:bg-green-600 font-semibold">
         {dropDownName}
         <ArrowDown className="size-4" />
       </DropdownMenuTrigger>

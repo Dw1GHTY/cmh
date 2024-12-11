@@ -3,13 +3,13 @@ import React from "react";
 interface ContactProps {
   phoneNumber?: string;
   email?: string;
+  style: string;
 }
 
-const Contact: React.FC<ContactProps> = ({ phoneNumber, email }) => {
+const Contact: React.FC<ContactProps> = ({ phoneNumber, email, style }) => {
   return (
-    <div className=" hidden md:flex ml-4 ">
-      {phoneNumber} <br />
-      {email}
+    <div className={style + " "}>
+      {phoneNumber} {email}
     </div>
   );
 };

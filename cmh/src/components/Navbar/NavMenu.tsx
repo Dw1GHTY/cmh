@@ -10,23 +10,35 @@ interface NavMenuProps {
 
 const NavMenu: React.FC<NavMenuProps> = ({ links }) => {
   return (
-    <div className=" hidden md:flex justify-center items-center mx-1 space-x-2">
-      {links?.map((link) => {
+    <div
+      key={1}
+      className=" hidden md:flex justify-center items-center space-x-2"
+    >
+      {links?.map((link, index) => {
         if (link.sublinks === undefined)
           return (
             <>
-              <NavLink name={link.name} />
-              <Separator className="bg-slate-600 h-6" orientation="vertical" />
+              <NavLink name={link.name} key={index} />
+              <Separator
+                key={index + 1}
+                className="bg-slate-600 h-6"
+                orientation="vertical"
+              />
             </>
           );
         else
           return (
             <>
               <NavDropdown
+                key={index}
                 dropDownName={link.name}
                 dropDownLinks={link.sublinks}
               />
-              <Separator className="bg-slate-600 h-6" orientation="vertical" />
+              <Separator
+                key={index + 1}
+                className="bg-slate-600 h-6"
+                orientation="vertical"
+              />
             </>
           );
       })}
