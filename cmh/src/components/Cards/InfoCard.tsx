@@ -2,35 +2,33 @@ import React from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 interface InfoCardProps {
   title?: string;
-  description?: string;
   content?: string;
-  footer?: string;
-  header?: string;
+  linkPath: string;
 }
 
-const InfoCard: React.FC<InfoCardProps> = ({
-  title,
-  description,
-  content,
-  footer,
-  header,
-}) => {
+const InfoCard: React.FC<InfoCardProps> = ({ title, content, linkPath }) => {
   return (
-    <Card className="w-fit border-gray-300 border-1 bg-green-300 text-black opacity-75 ">
+    <Card className="w-[300px] max-w-full border-gray-300 border bg-green-300 text-black opacity-75">
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardTitle className="text-lg font-bold">{title}</CardTitle>
       </CardHeader>
-      <CardContent>{content}</CardContent>
-      <CardFooter className="flex justify-between">{footer}</CardFooter>
+      <CardContent className="text-sm break-words">{content}</CardContent>
+      <CardFooter className="flex justify-between">
+        <Link
+          href={`./${linkPath}`}
+          className="px-4 py-2 bg-green-800 text-white hover:bg-green-400 cursor-pointer rounded-md"
+        >
+          Learn More
+        </Link>
+      </CardFooter>
     </Card>
   );
 };

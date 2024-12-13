@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = () => {
-  return <div>flu shots</div>;
+  return <div>biometric screenings</div>;
 };
 
 export default page;

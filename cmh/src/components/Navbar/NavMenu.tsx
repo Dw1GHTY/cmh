@@ -1,47 +1,22 @@
 import React from "react";
-import NavLink from "./NavLink";
 import { Separator } from "../ui/separator";
-import NavDropdown from "./NavDropdown";
-import { TLink } from "@/types/Link";
+import Link from "next/link";
+import NavDropdownMenu from "./NavDropdownMenu";
 
-interface NavMenuProps {
-  links?: Array<TLink>;
-}
-
-const NavMenu: React.FC<NavMenuProps> = ({ links }) => {
+const NavMenu: React.FC = () => {
   return (
-    <div
-      key={1}
-      className=" hidden md:flex justify-center items-center space-x-2"
-    >
-      {links?.map((link, index) => {
-        if (link.sublinks === undefined)
-          return (
-            <>
-              <NavLink name={link.name} key={index} />
-              <Separator
-                key={index + 1}
-                className="bg-slate-600 h-6"
-                orientation="vertical"
-              />
-            </>
-          );
-        else
-          return (
-            <>
-              <NavDropdown
-                key={index}
-                dropDownName={link.name}
-                dropDownLinks={link.sublinks}
-              />
-              <Separator
-                key={index + 1}
-                className="bg-slate-600 h-6"
-                orientation="vertical"
-              />
-            </>
-          );
-      })}
+    <div className=" hidden md:flex justify-center items-center space-x-2">
+      {/* //! corporate wellness services */}
+      <NavDropdownMenu />
+      <Separator orientation="vertical" className="bg-slate-500 h-8" />
+      <Link
+        href="./flu_shots"
+        className="rounded-md hover:bg-green-600 w-fit h-fit"
+      >
+        Flu Shots
+      </Link>
+
+      <Separator orientation="vertical" className="bg-slate-600 h-8" />
     </div>
   );
 };
