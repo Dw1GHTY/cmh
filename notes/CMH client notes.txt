@@ -1,0 +1,43 @@
+Complete Mobile Health (acronym and title -> CMH)
+
+For reference basically copy and improve MidlandHealth
+
+Needs to look clean, modern and professional.
+
+Features:
+
+	- List of services -> must be readable and modern-looking
+
+	- Admin page -> X
+	
+	- Email system -> From Company_Mail to Company_Mail, for questions
+
+structure:
+
+	- Navbar simmilar to GLT.
+
+	- Pages, all static, chill.
+	
+	- Good to use cards for info, much like GLT, just with prictures.
+
+	- Footer: revamp the Midland footer design, reference screenshot.
+
+------------IMPORTANT------------
+
+2 layouts - landing and the rest
+
+stock photos and many photos!
+
+no client feedback carousel X
+
+no mini navbar above navbar, make it all in one. X
+
+keep content from pages and change midland for cmh.
+
+contact us and join our team is email self to self with simple forms;
+join us has "qualifications" field. FORMAT THE EMAIL TO LOOK PRETTY.
+
+Remove On-site covid services and wellness blog from all parts
+
+Make socials but dont use, await further instr.
+
