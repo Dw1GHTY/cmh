@@ -9,7 +9,7 @@ const Logo: React.FC = () => {
   return (
     <div
       onClick={() => {
-        router.push("./");
+        router.push("/");
       }}
       className="h-16 w-32 border-black border-2 rounded-md text-xl hover:cursor-pointer"
     >

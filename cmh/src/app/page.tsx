@@ -19,7 +19,33 @@ const Home = () => {
 
       {/*//? cards */}
       <div className="flex">
-        <HomeInfoSegment />
+        <HomeInfoSegment
+          infoCards={[
+            {
+              title: "Flu Shot Clinics",
+              content:
+                "We have provided affordable onsite flu shot services for hundreds of employers, with over a decade of experience providing logistics, processes and resources to ensure your success",
+              linkPath: "/flu_shots",
+            },
+            {
+              title: "Corporate Wellness",
+              content:
+                "Our Suite of Corporate Wellness Services includes: Health Coaching, Wellness Platform, Flu Shot Clinics, Biometric Screenings, Drug Testing, and more...",
+              linkPath: "/corporate_wellness",
+            },
+            {
+              title: "Biometric Screening",
+              content:
+                "Stabilize your health premiums and learn about your employees wellness with our onsite biometric screenings, testing and reporting.",
+              linkPath: "/corporate_wellness/biometric_screenings",
+            },
+            {
+              title: "DNA Paternity Testing",
+              content: "Accessible paternity testing",
+              linkPath: "/corporate_wellness/dna_paternity_testing",
+            },
+          ]}
+        />
       </div>
       {/* //? carousel */}
     </div>

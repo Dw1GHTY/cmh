@@ -7,34 +7,36 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { toLowerCaseUnderscores } from "../../../utils/utils";
 
 interface DropdownMenuProps {
-  name: string;
   links: string[];
 }
 
-const NavDropdownMenu: React.FC = () => {
-  const router = useRouter();
-
+const NavDropdownMenu: React.FC<DropdownMenuProps> = ({ links }) => {
   return (
-    <div className="border-1 border-black rounded-md">
-      <DropdownMenu>
-        <DropdownMenuTrigger>Corporate Wellness Services</DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuItem>Our services</DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            <Link href="./corporate_wellness/health_coaching_program">
-              Health coaching program
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem>Biometric Screenings</DropdownMenuItem>
-          <DropdownMenuItem>Drug Testing Services</DropdownMenuItem>
-          <DropdownMenuItem>DNA Paternity Testing</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger className="h-10 px-1 rounded-md hover:bg-green-400">
+        Corporate Wellness Services
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuItem>
+          <Link href="/corporate_wellness">Our services</Link>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        {links.map((link, index) => {
+          return (
+            <DropdownMenuItem key={index}>
+              <Link
+                href={`/corporate_wellness/${toLowerCaseUnderscores(link)}`}
+              >
+                {link}
+              </Link>
+            </DropdownMenuItem>
+          );
+        })}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };
 

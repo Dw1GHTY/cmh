@@ -5,13 +5,20 @@ import NavDropdownMenu from "./NavDropdownMenu";
 
 const NavMenu: React.FC = () => {
   return (
-    <div className=" hidden md:flex justify-center items-center space-x-2">
+    <div className="hidden md:flex justify-center items-center space-x-2">
       {/* //! corporate wellness services */}
-      <NavDropdownMenu />
+      <NavDropdownMenu
+        links={[
+          "Health Coaching Program",
+          "Biometric Screenings",
+          "Drug Testing Services",
+          "DNA Paternity Testing",
+        ]}
+      />
       <Separator orientation="vertical" className="bg-slate-500 h-8" />
       <Link
-        href="./flu_shots"
-        className="rounded-md hover:bg-green-600 w-fit h-fit"
+        href="/flu_shots"
+        className="flex justify-center items-center px-1 rounded-md hover:bg-green-400 h-10"
       >
         Flu Shots
       </Link>

@@ -3,4 +3,5 @@ export type TInfoCard = {
   description?: string;
   content?: string;
   footer?: string;
+  linkPath: string;
 };

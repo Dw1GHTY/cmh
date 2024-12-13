@@ -16,7 +16,22 @@ const Navbar: React.FC<NavbarProps> = ({ styles }) => {
       <div className="flex justify-between w-full md:flex md:flex-row md:justify-center md:items-center md:w-5/6">
         <Logo />
         <NavMenu />
-        <NavMenuMobile />
+        <NavMenuMobile
+          dropDownLinks={[
+            {
+              linkName: "Health Coaching Program",
+              linkPath: "/corporate_wellness/health_coaching_program",
+            },
+            {
+              linkName: "Biometric Screenings",
+              linkPath: "/corporate_wellness/biometric_screenings",
+            },
+            {
+              linkName: "Drug Testing Services",
+              linkPath: "/corporate_wellness/",
+            },
+          ]}
+        />
         <Contact
           style="hidden md:flex md:ml-4 md:justify-center md:items-center"
           email="Nickibenson@completemobile-health.com"

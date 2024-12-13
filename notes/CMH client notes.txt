@@ -18,7 +18,7 @@ structure:
 
 	- Pages, all static, chill.
 	
-	- Good to use cards for info, much like GLT, just with prictures.
+	- Good to use cards for info, much like GLT, just with pictures.
 
 	- Footer: revamp the Midland footer design, reference screenshot.
 
