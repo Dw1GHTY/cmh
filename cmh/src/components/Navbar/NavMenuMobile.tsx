@@ -32,7 +32,7 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({ dropDownLinks }) => {
         >
           <Menu className="flex" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="bg-white bg-opacity-60 border-2 space-y-1 border-green-700 rounded-sm">
+        <DropdownMenuContent className="bg-white border-2 space-y-1 border-green-700 rounded-sm">
           <DropdownMenuLabel>Menu</DropdownMenuLabel>
           <DropdownMenuSeparator className="bg-green-400 w-full h-1" />
           <DropdownMenuSub>

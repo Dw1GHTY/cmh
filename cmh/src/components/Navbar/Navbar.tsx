@@ -28,10 +28,14 @@ const Navbar: React.FC<NavbarProps> = ({ styles }) => {
               linkName: "Drug Testing Services",
               linkPath: "/corporate_wellness/",
             },
+            {
+              linkName: "DNA Paternity Testing",
+              linkPath: "/corporate_wellness/dna_paternity_testing",
+            },
           ]}
         />
         <Contact
-          style="hidden md:flex md:ml-4 md:justify-center md:items-center"
+          style="hidden md:flex md:ml-4 md:justify-center md:items-center hover:text-white hover:cursor-pointer"
           email="Nickibenson@completemobile-health.com"
         />
       </div>

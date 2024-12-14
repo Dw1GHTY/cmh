@@ -7,25 +7,43 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
-import { Separator } from "../ui/separator";
+import Image from "next/image";
 
 interface InfoCardProps {
   title?: string;
   content?: string;
   linkPath: string;
+  imageSrc: string;
+  imageAlt: string;
 }
 
-const InfoCard: React.FC<InfoCardProps> = ({ title, content, linkPath }) => {
+const InfoCard: React.FC<InfoCardProps> = ({
+  title,
+  content,
+  linkPath,
+  imageSrc,
+  imageAlt,
+}) => {
   return (
-    <Card className="w-[300px] max-w-full border-gray-300 border bg-green-300 text-black opacity-75">
-      <CardHeader>
-        <CardTitle className="flex justify-center items-center text-lg font-bold">
-          {title}
+    <Card className="w-[300px] max-w-full bg-slate-100 rounded-md text-black">
+      <div className="relative overflow-hidden group">
+        <Image
+          src={imageSrc}
+          alt={imageAlt || "Card Image"}
+          width={300}
+          height={200}
+          className="object-cover transition-all duration-300 group-hover:brightness-75 group-hover:bg-lightgreen"
+        />
+        <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+      </div>
+      <CardHeader className="flex justify-center items-center">
+        <CardTitle className="flex justify-center items-center w-fit p-1 text-lg font-bold rounded-md hover:bg-green-700">
+          <Link href={`${linkPath}`}>{title}</Link>
         </CardTitle>
       </CardHeader>
-      <div>
+      {/* <div>
         <Separator className="bg-green-600 opacity-60 h-0.5 w-full" />
-      </div>
+      </div> */}
       <CardContent className="text-sm break-words">{content}</CardContent>
       <CardFooter className="flex justify-between">
         <Link

@@ -19,7 +19,7 @@ const ContactDialog: React.FC<ContactDialogProps> = ({
 }) => {
   return (
     <Dialog>
-      <DialogTrigger className="bg-green-400 text-black rounded-md size-fit p-2 hover:bg-green-200">
+      <DialogTrigger className="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200">
         {triggerName}
       </DialogTrigger>
       <DialogContent>

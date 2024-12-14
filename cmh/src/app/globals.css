@@ -27,7 +27,7 @@ body {
 }
 
 .background-image {
-  background-image: url("/landing_page_bg.jpg");
+  background-image: url("/background.jpg");
   background-size: cover; /* Ensures the image covers the entire viewport */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center center; /* Centers the image */

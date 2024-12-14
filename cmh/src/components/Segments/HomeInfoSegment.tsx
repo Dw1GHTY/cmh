@@ -9,10 +9,10 @@ interface HomeInfoSegmentProps {
 const HomeInfoSegment: React.FC<HomeInfoSegmentProps> = ({ infoCards }) => {
   return (
     <div className="flex flex-col">
-      <h1 className="flex justify-center items-center text-2xl">
+      <h1 className="flex justify-center items-center mb-2 text-xl md:text-4xl text-white font-semibold">
         Wellness and health programs designed for You!
       </h1>
-      <div className="flex flex-col md:flex-row md:justify-center md:items-center md:space-x-2">
+      <div className="flex flex-col md:flex-row md:justify-center md:items-start md:space-x-2">
         {infoCards.map((card, index) => {
           return (
             <InfoCard
@@ -20,6 +20,8 @@ const HomeInfoSegment: React.FC<HomeInfoSegmentProps> = ({ infoCards }) => {
               title={card.title}
               content={card.content}
               linkPath={card.linkPath}
+              imageSrc={card.imageSrc}
+              imageAlt={card.imageAlt}
             />
           );
         })}
