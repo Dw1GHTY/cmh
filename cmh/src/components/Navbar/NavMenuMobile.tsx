@@ -16,7 +16,7 @@ import {
 } from "../ui/dropdown-menu";
 import Link from "next/link";
 import { TDropDownLinks } from "@/types/TMobileNavLink";
-import { toLowerCaseUnderscores } from "@/lib/utils";
+import { toLowerCaseUnderscores } from "../../../lib/utils";
 
 interface NavMenuMobileProps {
   dropDownLinks: Array<TDropDownLinks>;

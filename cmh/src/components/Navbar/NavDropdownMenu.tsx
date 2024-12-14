@@ -7,7 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import Link from "next/link";
-import { toLowerCaseUnderscores } from "@/lib/utils";
+import { toLowerCaseUnderscores } from "../../../lib/utils";
 
 interface DropdownMenuProps {
   links: string[];

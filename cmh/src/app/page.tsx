@@ -1,3 +1,6 @@
+import ContactDialog from "@/components/Dialog/ContactDialog";
+import ApplicationForm from "@/components/Forms/ApplicationForm";
+import ContactForm from "@/components/Forms/ContactForm";
 import HomeInfoSegment from "@/components/Segments/HomeInfoSegment";
 import HomePicture from "@/components/Segments/HomePicture";
 import React from "react";
@@ -15,10 +18,16 @@ const Home = () => {
         <HomePicture />
       </div>
 
-      {/* //? Carousel with info and maybe links */}
+      {/*//? contact dialog with form*/}
+      <ContactDialog triggerName="Apply for a position">
+        <ApplicationForm />
+      </ContactDialog>
+      <ContactDialog triggerName="Apply for a position">
+        <ContactForm />
+      </ContactDialog>
 
       {/*//? cards */}
-      <div className="flex">
+      <section className="flex">
         <HomeInfoSegment
           infoCards={[
             {
@@ -46,7 +55,7 @@ const Home = () => {
             },
           ]}
         />
-      </div>
+      </section>
       {/* //? carousel */}
     </div>
   );
