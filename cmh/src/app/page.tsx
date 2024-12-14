@@ -22,7 +22,7 @@ const Home = () => {
       <ContactDialog triggerName="Apply for a position">
         <ApplicationForm />
       </ContactDialog>
-      <ContactDialog triggerName="Apply for a position">
+      <ContactDialog triggerName="Contact us">
         <ContactForm />
       </ContactDialog>
 

@@ -28,8 +28,8 @@ const formSchema = z.object({
     .min(5, { message: "Email must be atleast 5 characters long" }),
 });
 //!FUNCTION
-function sendEmail(data: z.infer<typeof formSchema>) {
-  fetch("https://cmh-test.vercel.app/api/email", {
+async function sendEmail(data: z.infer<typeof formSchema>) {
+  fetch("https://cmh-test.vercel.app/api/email/contact", {
     method: "POST",
     body: JSON.stringify(data),
   })
@@ -39,12 +39,13 @@ function sendEmail(data: z.infer<typeof formSchema>) {
     })
     .catch((err) => {
       alert(err);
+      console.log(err);
     });
 }
-function onSubmit(values: z.infer<typeof formSchema>) {
+async function onSubmit(values: z.infer<typeof formSchema>) {
   console.log(values);
   try {
-    sendEmail(values);
+    await sendEmail(values);
   } catch (err) {
     alert(`Error sending email!, error: ${err}`);
   } finally {

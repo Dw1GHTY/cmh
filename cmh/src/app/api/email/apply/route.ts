@@ -1,15 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import Mail from "nodemailer/lib/mailer";
-import { transport } from "../../../../lib/nodemailer";
+import { transport } from "../../../../../lib/nodemailer";
 
 export async function POST(request: NextRequest) {
-  const { email, message } = await request.json();
+  const { name, surname, email, message } = await request.json();
 
   const mailOptions: Mail.Options = {
     from: process.env.COMPANY_EMAIL,
     to: process.env.COMPANY_EMAIL,
     subject: `A message from: ${email}`,
-    text: `${message}`,
+    text: `Name: ${name}, Surname: ${surname}, Message: ${message}`,
   };
   const sendMailPromise = () =>
     new Promise<string>((resolve, reject) => {
