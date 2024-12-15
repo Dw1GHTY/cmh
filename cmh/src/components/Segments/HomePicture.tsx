@@ -24,10 +24,16 @@ const HomePicture: React.FC = () => {
           biometric screenings, blood testing and reporting.
         </p>
         <div className="flex flex-wrap flex-shrink gap-4 justify-center items-center mt-2">
-          <ContactDialog triggerName="Have a question?">
+          <ContactDialog
+            triggerName="Have a question?"
+            triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
+          >
             <ContactForm />
           </ContactDialog>
-          <ContactDialog triggerName="Want to partner with us?">
+          <ContactDialog
+            triggerName="Want to partner with us?"
+            triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
+          >
             <ApplicationForm />
           </ContactDialog>
         </div>

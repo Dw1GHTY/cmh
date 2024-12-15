@@ -11,7 +11,7 @@ interface ContactProps {
 const Contact: React.FC<ContactProps> = ({ email, style }) => {
   return (
     <div className={style + " "}>
-      <ContactDialog triggerName={`${email}`}>
+      <ContactDialog triggerStyle="" triggerName={`${email}`}>
         <ContactForm />
       </ContactDialog>
     </div>

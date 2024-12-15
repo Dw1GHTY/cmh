@@ -10,16 +10,18 @@ import {
 
 interface ContactDialogProps {
   triggerName: string;
+  triggerStyle: string;
   children: React.ReactNode;
 }
 
 const ContactDialog: React.FC<ContactDialogProps> = ({
   children,
   triggerName,
+  triggerStyle,
 }) => {
   return (
     <Dialog>
-      <DialogTrigger className="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200">
+      <DialogTrigger className={`${triggerStyle} `}>
         {triggerName}
       </DialogTrigger>
       <DialogContent>
