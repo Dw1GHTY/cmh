@@ -48,7 +48,6 @@ async function onSubmit(values: z.infer<typeof formSchema>) {
   } catch (err) {
     alert(`Error sending email!, error: ${err}`);
   } finally {
-    alert("Email successfully sent!");
   }
 }
 
