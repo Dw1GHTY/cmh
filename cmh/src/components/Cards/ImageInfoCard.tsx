@@ -17,7 +17,7 @@ interface InfoCardProps {
   imageAlt: string;
 }
 
-const InfoCard: React.FC<InfoCardProps> = ({
+const ImageInfoCard: React.FC<InfoCardProps> = ({
   title,
   content,
   linkPath,
@@ -57,4 +57,4 @@ const InfoCard: React.FC<InfoCardProps> = ({
   );
 };
 
-export default InfoCard;
+export default ImageInfoCard;

@@ -1,5 +1,5 @@
 import React from "react";
-import InfoCard from "../Cards/InfoCard";
+import ImageInfoCard from "../Cards/ImageInfoCard";
 import { TInfoCard } from "@/types/TInfoCard";
 
 interface HomeInfoSegmentProps {
@@ -15,7 +15,7 @@ const HomeInfoSegment: React.FC<HomeInfoSegmentProps> = ({ infoCards }) => {
       <div className="flex flex-col md:flex-row md:justify-center md:items-start md:space-x-2">
         {infoCards.map((card, index) => {
           return (
-            <InfoCard
+            <ImageInfoCard
               key={index}
               title={card.title}
               content={card.content}

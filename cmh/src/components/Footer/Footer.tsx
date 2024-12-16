@@ -6,7 +6,7 @@ import FooterInfo from "./FooterInfo";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col bg-green-200 h-fit p-4">
+    <footer className="flex flex-col bg-white h-fit p-4">
       {/* Links Section */}
       <section className="flex flex-row flex-wrap justify-between items-start w-full">
         {/* Logo on the Left */}
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                 },
                 {
                   name: "Flu Shot Clinics",
-                  linkPath: "/flu_shots",
+                  linkPath: "/corporate_wellness/flu_shots",
                 },
                 {
                   name: "Wellness Screenings",
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
 
       {/* Legal Section */}
       <section className="flex justify-center mt-4">
-        <Legal text="© Copyright Midland Health Testing Services 2024, All rights reserved — CLIA Certified PCR Lab Testing, Corporate Wellness Programs, Biometric Screenings, On Site Flu Shot Clinic, and Corporate Wellness Services in Wisconsin and all 50 States" />
+        <Legal text="© Copyright Complete Mobile Health Testing Services 2024, All rights reserved — CLIA Certified PCR Lab Testing, Corporate Wellness Programs, Biometric Screenings, On Site Flu Shot Clinic, and Corporate Wellness Services in Wisconsin and all 50 States" />
       </section>
     </footer>
   );

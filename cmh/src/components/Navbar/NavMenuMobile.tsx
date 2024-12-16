@@ -58,7 +58,7 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({ dropDownLinks }) => {
             </DropdownMenuPortal>
           </DropdownMenuSub>
           <DropdownMenuItem>
-            <Link href="/flu_shots">Flu Shot</Link>
+            <Link href="/corporate_wellness/flu_shots">Flu Shot</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Link href="/partnering">Partnering</Link>

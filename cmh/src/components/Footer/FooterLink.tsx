@@ -1,3 +1,4 @@
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -10,9 +11,10 @@ const FooterLink: React.FC<FooterLinkProps> = ({ linkName, linkPath }) => {
   return (
     <div>
       <Link
-        className="flex size-fit underline hover:text-green-900"
+        className="flex justify-center items-center size-fit underline hover:text-green-900"
         href={`${linkPath}`}
       >
+        <ChevronRight className="text-green-900 size-4" />
         {linkName}
       </Link>
     </div>

@@ -23,7 +23,7 @@ const Home = () => {
               title: "Flu Shot Clinics",
               content:
                 "We have provided affordable onsite flu shot services for hundreds of employers, with over a decade of experience providing logistics, processes and resources to ensure your success",
-              linkPath: "/flu_shots",
+              linkPath: "/corporate_wellness/flu_shots",
               imageSrc: "/flu_shot.jpg",
               imageAlt: "Image of a flu shot",
             },
