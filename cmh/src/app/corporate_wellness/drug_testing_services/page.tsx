@@ -1,3 +1,4 @@
+import Article from "@/components/Article";
 import PageImage from "@/components/PageImage";
 import React from "react";
 
@@ -10,36 +11,14 @@ const page = () => {
         subtitle=""
       />
       <div className="flex flex-col items-center w-5/6 md:w-1/2 h-fit my-4">
-        <section className="flex flex-col size-fit bg-white rounded-md shadow-md p-2">
-          <h2 className="bg-white text-black text-2xl">
-            Drug Testing Services for Employers Nationwide
-          </h2>
-          <br />
-          <article>
-            <p>
-              As an employer, you don’t always know if there’s a problem with
-              substance abuse by looking at an employee or reviewing an
-              application. That’s why drug screening is so important in the
-              workplace.
-            </p>
-            <br />
-            <p>
-              Midland offers complete non-DOT and DOT-regulated alcohol and drug
-              testing collection services for pre-employment, random, return to
-              duty, follow-up, reasonable cause, reasonable suspicion and
-              post-accident drug testing.
-            </p>
-            <br />
-            <p>
-              Whether you require hair, oral fluid, urine or blood collections,
-              our fast and professional collectors follow very stringent
-              collection protocols, producing the highest quality laboratory
-              drug testing results and eliminating the many canceled, rejected
-              or troubled specimens due to poorly trained or inexperienced
-              collectors.
-            </p>
-          </article>
-        </section>
+        <Article
+          title="Drug Testing Services for Employers Nationwide"
+          paragraps={[
+            "As an employer, you don’t always know if there’s a problem with substance abuse by looking at an employee or reviewing an application. That’s why drug screening is so important in the workplace.",
+            "Complete Mobile Health offers complete non-DOT and DOT-regulated alcohol and drug testing collection services for pre-employment, random, return to duty, follow-up, reasonable cause, reasonable suspicion and post-accident drug testing.",
+            "Whether you require hair, oral fluid, urine or blood collections, our fast and professional collectors follow very stringent collection protocols, producing the highest quality laboratory drug testing results and eliminating the many canceled, rejected or troubled specimens due to poorly trained or inexperienced collectors.",
+          ]}
+        />
       </div>
     </div>
   );

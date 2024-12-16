@@ -30,26 +30,26 @@ const page = () => {
             <br />
             <Paragraph
               title="Reliable and Safe"
-              text="With over a decade of experience, Midland Health provides highly trained RNs, NPs and MDs to administer flu vaccinations. We abide by all government safety standards. Even during the H1N1 crisis, we secured and delivered vaccinations for all of our on-site clinics, as promised."
+              text="With over a decade of experience, Complete Mobile Health provides highly trained RNs, NPs and MDs to administer flu vaccinations. We abide by all government safety standards. Even during the H1N1 crisis, we secured and delivered vaccinations for all of our on-site clinics, as promised."
             />
             <br />
             <h3 className="text-green-600 text-lg">Competitive Pricing</h3>
             <p>
-              We know your bottom line is important. That’s why Midland Health
-              offers volume discounts. And, we’re Medicare approved for
+              We know your bottom line is important. That’s why Complete Mobile
+              Health offers volume discounts. And, we’re Medicare approved for
               vaccinations.
             </p>
             <p>
-              Midland Health Testing Services Bills Insurance or Medicare
-              Directly when applicable.
+              Complete Mobile Health Testing Services Bills Insurance or
+              Medicare Directly when applicable.
             </p>
             <br />
             <h4 className="text-black font-semibold">For More Information</h4>
             <p>
-              Need information on how Midland Health can help administer your
-              company’s Flu Vaccine Clinic? Please contact Jo Steinberg at (800)
-              898-8211, Jo@midlandhealth.com or use our On-Site Flu Shot Clinic
-              Quote Request.
+              Need information on how Complete Mobile Health can help administer
+              your company’s Flu Vaccine Clinic? Please contact Jo Steinberg at
+              (800) 898-8211, Nickibenson@completemobile-health.com or use our
+              On-Site Flu Shot Clinic Quote Request.
             </p>
           </article>
         </section>

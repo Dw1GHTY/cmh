@@ -10,7 +10,7 @@ const page = () => {
         title="Corporate Wellness Services"
         subtitle=""
       />
-      <div className="flex flex-row justify-center items-center w-full h-fit">
+      <div className="flex flex-col justify-center items-center w-full h-fit">
         {/* //!ARTICLE */}
         <ParagraphCard
           title="Health Coaching Program"
