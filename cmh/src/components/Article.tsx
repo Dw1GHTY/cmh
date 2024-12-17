@@ -21,6 +21,7 @@ const Article: React.FC<ArticleProps> = (props) => {
       <Separator className="h-0.5 w-1/2 bg-green-400 rounded-md" />
       <br />
       {paragraps.map((parag, index) => {
+        //? 0-based index
         return (
           <>
             <p key={index} className="text-black">

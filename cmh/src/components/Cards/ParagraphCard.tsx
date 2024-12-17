@@ -20,7 +20,7 @@ const ParagraphCard: React.FC<ParagraphCardProps> = ({
   linkPath,
 }) => {
   return (
-    <section className="w-full md:w-1/2 my-3 bg-opacity-85 shadow-md">
+    <section className="w-full h-fit md:w-1/2 my-3 bg-opacity-85 shadow-lg">
       <Card>
         <CardHeader>
           <CardTitle>
@@ -33,14 +33,16 @@ const ParagraphCard: React.FC<ParagraphCardProps> = ({
         <CardContent>
           <p>{content}</p>
         </CardContent>
-        <CardFooter>
-          <Link
-            className="size-fit p-1 rounded-sm bg-green-800 text-white hover:bg-green-600"
-            href={linkPath}
-          >
-            More Details
-          </Link>
-        </CardFooter>
+        {linkPath && (
+          <CardFooter>
+            <Link
+              className="size-fit p-1 rounded-sm bg-green-800 text-white hover:bg-green-600"
+              href={linkPath}
+            >
+              More Details
+            </Link>
+          </CardFooter>
+        )}
       </Card>
     </section>
   );
