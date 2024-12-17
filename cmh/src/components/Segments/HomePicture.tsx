@@ -1,8 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import ContactDialog from "../Dialog/ContactDialog";
-import ContactForm from "../Forms/ContactForm";
-import ApplicationForm from "../Forms/ApplicationForm";
 
 const HomePicture: React.FC = () => {
   return (
@@ -23,20 +20,6 @@ const HomePicture: React.FC = () => {
           Custom corporate wellness programs for your employees. On site
           biometric screenings, blood testing and reporting.
         </p>
-        <div className="flex flex-wrap flex-shrink gap-4 justify-center items-center mt-2">
-          <ContactDialog
-            triggerName="Have a question?"
-            triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
-          >
-            <ContactForm />
-          </ContactDialog>
-          <ContactDialog
-            triggerName="Want to partner with us?"
-            triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
-          >
-            <ApplicationForm />
-          </ContactDialog>
-        </div>
       </div>
     </div>
   );

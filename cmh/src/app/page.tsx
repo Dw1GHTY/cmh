@@ -1,3 +1,6 @@
+import ContactDialog from "@/components/Dialog/ContactDialog";
+import ApplicationForm from "@/components/Forms/ApplicationForm";
+import ContactForm from "@/components/Forms/ContactForm";
 import HomeInfoSegment from "@/components/Segments/HomeInfoSegment";
 import HomePicture from "@/components/Segments/HomePicture";
 import React from "react";
@@ -13,6 +16,24 @@ const Home = () => {
       {/*//?Home Picture*/}
       <div className="flex w-5/6 h-full rounded-md my-1">
         <HomePicture />
+      </div>
+
+      <div className="flex flex-col flex-wrap-reverse justify-center items-center my-4">
+        <h2 className="flex text-white text-xl">Contact us</h2>
+        <div className="flex flex-row space-x-2">
+          <ContactDialog
+            triggerName="Have a question?"
+            triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
+          >
+            <ContactForm />
+          </ContactDialog>
+          <ContactDialog
+            triggerName="Want to partner with us?"
+            triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
+          >
+            <ApplicationForm />
+          </ContactDialog>
+        </div>
       </div>
 
       {/*//? cards */}
