@@ -9,20 +9,25 @@ import {
 } from "../ui/dialog";
 
 interface ContactDialogProps {
-  triggerName: string;
+  triggerEmail: string;
+  triggerPhone: string;
   triggerStyle: string;
   children: React.ReactNode;
 }
 
 const ContactDialog: React.FC<ContactDialogProps> = ({
   children,
-  triggerName,
+  triggerEmail,
+  triggerPhone,
   triggerStyle,
 }) => {
   return (
     <Dialog>
-      <DialogTrigger className={`${triggerStyle} `}>
-        {triggerName}
+      <DialogTrigger
+        className={`${triggerStyle} flex flex-col justify-center items-center`}
+      >
+        <p>{triggerEmail}</p>
+        <p>{triggerPhone}</p>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

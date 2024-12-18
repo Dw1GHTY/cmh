@@ -48,7 +48,7 @@ const page = () => {
             <p>
               Need information on how Complete Mobile Health can help administer
               your company’s Flu Vaccine Clinic? Please contact Jo Steinberg at
-              (800) 898-8211, Nickibenson@completemobile-health.com or use our
+              414-213-6543, Nickibenson@completemobile-health.com or use our
               On-Site Flu Shot Clinic Quote Request.
             </p>
           </article>

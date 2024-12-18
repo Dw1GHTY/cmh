@@ -22,13 +22,15 @@ const Home = () => {
         <h2 className="flex text-white text-xl">Contact us</h2>
         <div className="flex flex-row space-x-2">
           <ContactDialog
-            triggerName="Have a question?"
+            triggerPhone=""
+            triggerEmail="Have a question?"
             triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
           >
             <ContactForm />
           </ContactDialog>
           <ContactDialog
-            triggerName="Want to partner with us?"
+            triggerPhone=""
+            triggerEmail="Want to partner with us?"
             triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
           >
             <ApplicationForm />

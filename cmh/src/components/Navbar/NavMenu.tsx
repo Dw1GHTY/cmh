@@ -5,7 +5,7 @@ import NavDropdownMenu from "./NavDropdownMenu";
 
 const NavMenu: React.FC = () => {
   return (
-    <div className="hidden md:flex justify-center items-center space-x-2">
+    <div className="hidden md:flex justify-center mx-3 items-center space-x-2">
       {/* //! corporate wellness services */}
       <NavDropdownMenu
         links={[
@@ -22,8 +22,6 @@ const NavMenu: React.FC = () => {
       >
         Flu Shots
       </Link>
-
-      <Separator orientation="vertical" className="bg-slate-600 h-8" />
     </div>
   );
 };

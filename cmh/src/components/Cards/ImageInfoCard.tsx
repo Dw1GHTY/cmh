@@ -25,7 +25,7 @@ const ImageInfoCard: React.FC<InfoCardProps> = ({
   imageAlt,
 }) => {
   return (
-    <Card className="w-[300px] max-w-full bg-slate-100 rounded-md text-black">
+    <Card className="w-[300px] max-w-full bg-slate-100 rounded-md text-black my-2">
       <div className="relative overflow-hidden group">
         <Image
           src={imageSrc}

@@ -4,13 +4,9 @@ import NavMenu from "./NavMenu";
 import Contact from "../Contact";
 import NavMenuMobile from "./NavMenuMobile";
 
-interface NavbarProps {
-  styles: string;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ styles }) => {
+const Navbar: React.FC = () => {
   return (
-    <nav className={styles + " backdrop-filter backdrop-blur-lg bg-opacity-35"}>
+    <nav className="sticky top-0 z-10 flex justify-center items-center h-20 bg-white backdrop-filter backdrop-blur-lg bg-opacity-35">
       <div className="flex justify-between w-full md:flex md:flex-row md:justify-center md:items-center md:w-5/6">
         <Logo />
         <NavMenu />
@@ -35,8 +31,9 @@ const Navbar: React.FC<NavbarProps> = ({ styles }) => {
           ]}
         />
         <Contact
-          style="hidden md:flex md:ml-4 md:justify-center md:items-center hover:text-white hover:cursor-pointer"
-          email="Nickibenson@completemobile-health.com"
+          style="hidden md:flex md:justify-center md:items-center hover:text-white hover:cursor-pointer"
+          email="nickib@completemobile-health.com"
+          phone="414-213-6543"
         />
       </div>
     </nav>

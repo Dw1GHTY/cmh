@@ -6,7 +6,8 @@ const FooterContact = () => {
   return (
     <div className="">
       <ContactDialog
-        triggerName="Contact Complete Mobile Health"
+        triggerPhone=""
+        triggerEmail="Contact Complete Mobile Health"
         triggerStyle="text-left underline hover:text-green-800"
       >
         <ContactForm />

@@ -5,13 +5,18 @@ import ContactForm from "./Forms/ContactForm";
 interface ContactProps {
   // phoneNumber?: string;
   email?: string;
+  phone?: string;
   style: string;
 }
 
-const Contact: React.FC<ContactProps> = ({ email, style }) => {
+const Contact: React.FC<ContactProps> = ({ email, phone, style }) => {
   return (
     <div className={style + " "}>
-      <ContactDialog triggerStyle="" triggerName={`${email}`}>
+      <ContactDialog
+        triggerStyle=""
+        triggerEmail={`${email}`}
+        triggerPhone={`${phone}`}
+      >
         <ContactForm />
       </ContactDialog>
     </div>

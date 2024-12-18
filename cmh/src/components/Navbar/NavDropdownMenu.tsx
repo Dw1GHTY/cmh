@@ -19,7 +19,7 @@ const NavDropdownMenu: React.FC<DropdownMenuProps> = ({ links }) => {
       <DropdownMenuTrigger className="h-10 px-1 rounded-md hover:bg-green-400">
         Corporate Wellness Services
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent className="">
         <DropdownMenuItem>
           <Link href="/corporate_wellness">Our services</Link>
         </DropdownMenuItem>
