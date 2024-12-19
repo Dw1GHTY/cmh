@@ -1,5 +1,4 @@
 import Article from "@/components/Article";
-import Paragraph from "@/components/Paragraph";
 import React from "react";
 
 const page = () => {
