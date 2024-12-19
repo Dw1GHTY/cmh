@@ -44,7 +44,7 @@ const page = () => {
             Complete Mobile Health goes beyond physical health to focus on ﬁve
             dimensions of wellbeing.
           </h2>
-          <span className="border-2 border-black">BIIIIG IMAGE</span>
+          {/* //! BIIIIIIG IMAGE */}
         </article>
         <article>
           <h2 className="text-green-800 font-bold text-2xl">

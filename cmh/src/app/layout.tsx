@@ -16,9 +16,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat bg-slate-200">
+      <body className="flex flex-col min-h-screen bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat bg-slate-200 ">
         {/*//? styles attribute concat with classname */}
         <Navbar />
+        {/* <Image
+          alt="test"
+          src={`/background.jpg`}
+          fill
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        /> */}
         <main className="flex flex-grow">{children}</main>
         <Footer />
       </body>
