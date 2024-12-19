@@ -33,10 +33,13 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({ dropDownLinks }) => {
           <Menu className="flex" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="bg-white border-2 space-y-1 border-green-700 rounded-sm">
-          <DropdownMenuLabel>Menu</DropdownMenuLabel>
+          <DropdownMenuLabel className="flex justify-center items-center">
+            Menu
+          </DropdownMenuLabel>
           <DropdownMenuSeparator className="bg-green-400 w-full h-1" />
+          {/*//? Dynamic here */}
           <DropdownMenuSub>
-            <DropdownMenuSubTrigger>
+            <DropdownMenuSubTrigger className="text-">
               Corporate Wellness Services
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
@@ -45,6 +48,7 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({ dropDownLinks }) => {
                   return (
                     <DropdownMenuItem key={index}>
                       <Link
+                        className="hover:bg-slate-200 w-full rounded-md my-1 p-1"
                         href={`/corporate_wellness/${toLowerCaseUnderscores(
                           link.linkName
                         )}`}
@@ -57,11 +61,30 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({ dropDownLinks }) => {
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
-          <DropdownMenuItem>
-            <Link href="/corporate_wellness/flu_shots">Flu Shot</Link>
+          <DropdownMenuItem className="flex justify-center items-center">
+            <Link
+              href="/corporate_wellness"
+              className="hover:bg-slate-200 flex justify-center items-center w-full rounded-md my-1 p-1"
+            >
+              Our Services
+            </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Link href="/partnering">Partnering</Link>
+
+          <DropdownMenuItem className="flex justify-center items-center">
+            <Link
+              className="flex items-center justify-center hover:bg-slate-200"
+              href="/corporate_wellness/flu_shots"
+            >
+              Flu Shot
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="flex justify-center items-center">
+            <Link
+              className="flex items-center justify-center hover:bg-slate-200"
+              href="/partnering"
+            >
+              Partnering
+            </Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
