@@ -15,7 +15,6 @@ import {
   DropdownMenuSubTrigger,
 } from "../ui/dropdown-menu";
 import Link from "next/link";
-import { toLowerCaseUnderscores } from "../../../lib/utils";
 
 type Link = {
   name: string;
