@@ -15,14 +15,28 @@ import {
   DropdownMenuSubTrigger,
 } from "../ui/dropdown-menu";
 import Link from "next/link";
-import { TDropDownLinks } from "@/types/TMobileNavLink";
 import { toLowerCaseUnderscores } from "../../../lib/utils";
 
+type Link = {
+  name: string;
+  path: string;
+};
+
+type DropdownLink = {
+  name: string;
+  links: Array<Link>;
+};
+
 interface NavMenuMobileProps {
-  dropDownLinks: Array<TDropDownLinks>;
+  //Ubuduce i trigger name
+  hamburgerLinks: Array<Link> | null;
+  hamburgerDropdowns: Array<DropdownLink> | null;
 }
 
-const NavMenuMobile: React.FC<NavMenuMobileProps> = ({ dropDownLinks }) => {
+const NavMenuMobile: React.FC<NavMenuMobileProps> = ({
+  hamburgerLinks,
+  hamburgerDropdowns,
+}) => {
   return (
     <div className="md:hidden flex size-fit items-center justify-center bg-green-400 border-green-300 border-2 rounded-md hover:bg-green-300 hover:border-gray-400">
       <DropdownMenu>
@@ -37,55 +51,49 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({ dropDownLinks }) => {
             Menu
           </DropdownMenuLabel>
           <DropdownMenuSeparator className="bg-green-400 w-full h-1" />
-          {/*//? Dynamic here */}
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger className="text-">
-              Corporate Wellness Services
-            </DropdownMenuSubTrigger>
-            <DropdownMenuPortal>
-              <DropdownMenuSubContent className="">
-                {dropDownLinks.map((link, index) => {
-                  return (
-                    <DropdownMenuItem key={index}>
-                      <Link
-                        className="hover:bg-slate-200 w-full rounded-md my-1 p-1"
-                        href={`/corporate_wellness/${toLowerCaseUnderscores(
-                          link.linkName
-                        )}`}
-                      >
-                        {link.linkName}
-                      </Link>
-                    </DropdownMenuItem>
-                  );
-                })}
-              </DropdownMenuSubContent>
-            </DropdownMenuPortal>
-          </DropdownMenuSub>
-          <DropdownMenuItem className="flex justify-center items-center">
-            <Link
-              href="/corporate_wellness"
-              className="hover:bg-slate-200 flex justify-center items-center w-full rounded-md my-1 p-1"
-            >
-              Our Services
-            </Link>
-          </DropdownMenuItem>
+          {/*//! DYNAMIC START */}
+          {hamburgerLinks?.map((link, index) => {
+            return (
+              <DropdownMenuItem key={index} className="flex size-full">
+                <Link
+                  href={link.path}
+                  className="flex size-full justify-center items-center rounded-md hover:bg-green-200"
+                >
+                  {link.name}
+                </Link>
+              </DropdownMenuItem>
+            );
+          })}
+          {hamburgerDropdowns?.map((dropdown, index) => {
+            return (
+              <DropdownMenuSub key={index}>
+                <DropdownMenuSubTrigger className="">
+                  {dropdown.name}
+                </DropdownMenuSubTrigger>
+                <DropdownMenuPortal>
+                  <DropdownMenuSubContent className="">
+                    {dropdown.links.map((link, link_index) => {
+                      return (
+                        <DropdownMenuItem
+                          key={link_index}
+                          className="flex size-full"
+                        >
+                          <Link
+                            href={link.path}
+                            className="flex size-full justify-center items-center rounded-md hover:bg-green-200"
+                          >
+                            {link.name}
+                          </Link>
+                        </DropdownMenuItem>
+                      );
+                    })}
+                  </DropdownMenuSubContent>
+                </DropdownMenuPortal>
+              </DropdownMenuSub>
+            );
+          })}
 
-          <DropdownMenuItem className="flex justify-center items-center">
-            <Link
-              className="flex items-center justify-center hover:bg-slate-200"
-              href="/corporate_wellness/flu_shots"
-            >
-              Flu Shot
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex justify-center items-center">
-            <Link
-              className="flex items-center justify-center hover:bg-slate-200"
-              href="/partnering"
-            >
-              Partnering
-            </Link>
-          </DropdownMenuItem>
+          {/* //!DYNAMIC END */}
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

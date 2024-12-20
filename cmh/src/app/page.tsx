@@ -39,7 +39,7 @@ const Home = () => {
       </div>
 
       {/*//? cards */}
-      <section className="flex">
+      <section className="flex w-full justify-center items-center">
         <HomeInfoSegment
           infoCards={[
             {

@@ -32,3 +32,11 @@ body {
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center center; /* Centers the image */
 }
+
+html,
+body {
+  width: 100%;
+  /* overflow-x: hidden; */
+  margin: 0;
+  padding: 0;
+}

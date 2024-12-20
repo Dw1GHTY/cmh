@@ -134,7 +134,9 @@ const ApplicationForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="bg-green-900 text-white">
+          Submit
+        </Button>
       </form>
     </Form>
   );

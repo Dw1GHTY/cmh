@@ -11,27 +11,46 @@ const Navbar: React.FC = () => {
         <Logo />
         <NavMenu />
         <NavMenuMobile
-          dropDownLinks={[
+          hamburgerLinks={[
             {
-              linkName: "Health Coaching Program",
-              linkPath: "/corporate_wellness/health_coaching_program",
+              name: "Our Services",
+              path: "/corporate_wellness",
             },
             {
-              linkName: "Biometric Screenings",
-              linkPath: "/corporate_wellness/biometric_screenings",
+              name: "Flu Shots",
+              path: "/corporate_wellness/flu_shots",
             },
             {
-              linkName: "Drug Testing Services",
-              linkPath: "/corporate_wellness/",
+              name: "Screenings",
+              path: "/corporate_wellness/screenings",
             },
+          ]}
+          hamburgerDropdowns={[
             {
-              linkName: "DNA Paternity Testing",
-              linkPath: "/corporate_wellness/dna_paternity_testing",
+              name: "Corporate Wellness Services",
+              links: [
+                {
+                  name: "Health Coaching Program",
+                  path: "/corporate_wellness/health_coaching_program",
+                },
+                {
+                  name: "Biometric Screenings",
+                  path: "/corporate_wellness/biometric_screenings",
+                },
+                {
+                  name: "Drug Testing Services",
+                  path: "/corporate_wellness/",
+                },
+                {
+                  name: "DNA Paternity Testing",
+                  path: "/corporate_wellness/dna_paternity_testing",
+                },
+              ],
             },
           ]}
         />
         <Contact
-          style="hidden md:flex md:justify-center md:items-center hover:text-white hover:cursor-pointer"
+          style="hidden p-1 bg-white rounded-md cursor-pointer md:flex md:justify-center md:items-center hover:bg-green-200"
           email="nickib@completemobile-health.com"
           phone="414-213-6543"
         />
