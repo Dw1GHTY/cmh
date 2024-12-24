@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
       <h1 className="text-white text-4xl font-semibold">Wellness Screenings</h1>
-      <section className="flex flex-col justify-center items-center w-full md:w-3/4">
+      <section className="flex flex-col justify-center items-center w-full md:w-1/2">
         <Article
           title="On-Site Wellness Screenings"
           paragraps={[

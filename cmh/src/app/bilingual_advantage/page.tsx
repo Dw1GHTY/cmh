@@ -10,12 +10,12 @@ const page = () => {
       <section className="flex flex-col justify-start bg-white w-full md:w-2/3 h-fit my-3 p-4 rounded-md shadow-md">
         <Paragraph
           title=""
-          text="Midland Health offers bilingual medical screening staff and health coaching staff to assist you with your wellness program. We provide on site biometric screening services, blood testing, and easy to understand outcomes-based reports in both English and Spanish. Our HRA is available in Spanish, English, and compatible with Google Language, which offers translation into 104 languages."
+          text="Complete Mobile Health offers bilingual medical screening staff and health coaching staff to assist you with your wellness program. We provide on site biometric screening services, blood testing, and easy to understand outcomes-based reports in both English and Spanish. Our HRA is available in Spanish, English, and compatible with Google Language, which offers translation into 104 languages."
         />
         <br />
         <Paragraph
           title=""
-          text="Our bilingual support staff is available for continuous education. When our bilingual staff is not available, Midland recommends using the Language Line, an online translation resource."
+          text="Our bilingual support staff is available for continuous education. When our bilingual staff is not available, Complete Mobile recommends using the Language Line, an online translation resource."
         />
         <br />
         <h3 className="text-3xl text-green-900">

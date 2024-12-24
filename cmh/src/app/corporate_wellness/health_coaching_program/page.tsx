@@ -62,7 +62,7 @@ const page = () => {
           <h2 className="flex justify-center items-center text-green-800 font-bold text-2xl">
             Tracking Coaching Outcomes
           </h2>
-          <div className="flex flex-col space-x-3 md:flex-row w-full h-fit">
+          <div className="flex flex-col md:flex-row w-full h-fit">
             <ParagraphCard
               title="Participation Data"
               content="Eligibility, Enrollment,

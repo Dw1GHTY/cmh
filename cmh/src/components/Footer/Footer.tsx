@@ -10,13 +10,13 @@ const Footer: React.FC = () => {
       {/* Links Section */}
       <section className="flex flex-row flex-wrap justify-between items-start w-full">
         {/* Logo on the Left */}
-        <div className="flex w-1/5">
+        <div className="flex w-full mb-2 justify-center items-center md:w-1/5">
           <Logo />
         </div>
 
         {/* Links in the Middle */}
         <div className="flex flex-1 justify-center">
-          <div className="flex flex-row space-x-4">
+          <div className="flex flex-row">
             <FooterLinksSegment
               links={[
                 {
