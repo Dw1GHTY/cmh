@@ -3,8 +3,8 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full h-full">
-      <h1 className="text-white text-4xl font-semibold">
+    <div className="flex flex-col justify-center items-center w-full h-full mt-24">
+      <h1 className="text-white text-4xl font-semibold text-center">
         Complete Mobile Health Offers Bilingual Services
       </h1>
       <section className="flex flex-col justify-start bg-white w-full md:w-2/3 h-fit my-3 p-4 rounded-md shadow-md">

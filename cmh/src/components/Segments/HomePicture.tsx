@@ -3,7 +3,7 @@ import React from "react";
 
 const HomePicture: React.FC = () => {
   return (
-    <div className="relative w-full max-w-4xl mx-auto h-auto overflow-hidden rounded-md shadow-lg aspect-[16/9] md:aspect-[16/9] shadow-green-900">
+    <div className="relative w-full max-w-4xl mx-auto h-auto overflow-hidden rounded-md shadow-lg aspect-[16/9] md:aspect-[16/9] mt-24 shadow-green-900">
       <Image
         src="/stock1.png"
         alt="Blood test"
