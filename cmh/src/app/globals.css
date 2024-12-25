@@ -26,17 +26,10 @@ body {
   }
 }
 
-.background-image {
-  background-image: url("/background.jpg");
-  background-size: cover; /* Ensures the image covers the entire viewport */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center center; /* Centers the image */
-}
-
 html,
 body {
   width: 100%;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
