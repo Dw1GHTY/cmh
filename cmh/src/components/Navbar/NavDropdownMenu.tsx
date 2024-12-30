@@ -16,7 +16,7 @@ interface DropdownMenuProps {
 const NavDropdownMenu: React.FC<DropdownMenuProps> = ({ links }) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="h-10 px-1 rounded-md hover:bg-green-400">
+      <DropdownMenuTrigger className="h-10 px-1 font-semibold rounded-md hover:bg-green-600 hover:text-white">
         Corporate Wellness Services
       </DropdownMenuTrigger>
       <DropdownMenuContent className="">

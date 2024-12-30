@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
           ]}
         />
         <Contact
-          style="hidden p-1 bg-white rounded-md cursor-pointer md:flex md:justify-center md:items-center hover:bg-green-200"
+          style="hidden p-1 bg-white rounded-md shadow-md cursor-pointer md:flex md:justify-center md:items-center hover:bg-green-600 hover:text-white"
           email="nickib@completemobile-health.com"
           phone="414-213-6543"
         />

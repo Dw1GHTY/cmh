@@ -18,7 +18,7 @@ const NavMenu: React.FC = () => {
       <Separator orientation="vertical" className="bg-slate-500 h-8" />
       <Link
         href="/corporate_wellness/flu_shots"
-        className="flex justify-center items-center px-1 rounded-md hover:bg-green-400 h-10"
+        className="flex justify-center items-center px-1 font-semibold rounded-md hover:bg-green-600 hover:text-white h-10"
       >
         Flu Shots
       </Link>
