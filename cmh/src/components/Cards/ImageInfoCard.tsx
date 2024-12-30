@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Card,
@@ -8,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 interface InfoCardProps {
   title?: string;
   content?: string;
@@ -24,8 +25,15 @@ const ImageInfoCard: React.FC<InfoCardProps> = ({
   imageSrc,
   imageAlt,
 }) => {
+  const router = useRouter();
   return (
-    <Card className="w-[300px] max-w-full bg-slate-100 rounded-md text-black my-2 ">
+    <Card
+      onClick={() => {
+        router.push(`${linkPath}`);
+      }}
+      className="w-[300px] max-w-full bg-slate-100 rounded-md text-black my-2
+     shadow-white shadow-sm hover:shadow-white hover:shadow-lg cursor-pointer"
+    >
       <div className="relative overflow-hidden group">
         <Image
           src={imageSrc}
@@ -37,8 +45,8 @@ const ImageInfoCard: React.FC<InfoCardProps> = ({
         <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
       </div>
       <CardHeader className="flex justify-center items-center">
-        <CardTitle className="flex justify-center items-center w-fit p-1 text-lg font-bold rounded-md hover:bg-green-700">
-          <Link href={`${linkPath}`}>{title}</Link>
+        <CardTitle className="flex justify-center items-center w-fit p-1 text-lg font-semibold">
+          <h2 className="text-center">{title}</h2>
         </CardTitle>
       </CardHeader>
       {/* <div>
@@ -48,7 +56,7 @@ const ImageInfoCard: React.FC<InfoCardProps> = ({
       <CardFooter className="flex justify-between">
         <Link
           href={`${linkPath}`}
-          className="px-4 py-2 bg-green-800 text-white hover:bg-green-400 cursor-pointer rounded-md"
+          className="px-4 py-2 bg-green-600 text-white hover:bg-green-400 cursor-pointer rounded-md"
         >
           Learn More
         </Link>

@@ -6,7 +6,7 @@ import NavMenuMobile from "./NavMenuMobile";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="fixed w-full top-0 z-10 flex justify-center items-center h-20 bg-white backdrop-filter backdrop-blur-lg bg-opacity-35">
+    <nav className="fixed px-2 w-full top-0 z-10 flex justify-center items-center h-20 bg-white backdrop-filter backdrop-blur-lg bg-opacity-35">
       <div className="flex justify-between w-full md:flex md:flex-row md:justify-center md:items-center">
         <Logo />
         <NavMenu />

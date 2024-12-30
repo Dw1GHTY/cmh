@@ -8,7 +8,10 @@ const Logo: React.FC = () => {
   const router = useRouter();
 
   return (
-    <div className="flex items-center h-full rounded-md hover:shadow-lg hover:shadow-green-900">
+    <div
+      className="flex items-center h-full rounded-md 
+    hover:shadow-lg hover:shadow-white"
+    >
       <Image
         className="cursor-pointer rounded-md"
         onClick={() => {
