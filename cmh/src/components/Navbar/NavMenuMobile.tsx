@@ -27,7 +27,6 @@ type DropdownLink = {
 };
 
 interface NavMenuMobileProps {
-  //Ubuduce i trigger name
   hamburgerLinks: Array<Link> | null;
   hamburgerDropdowns: Array<DropdownLink> | null;
 }

@@ -10,9 +10,9 @@ const page = () => {
         title="Flu Shot Clinics Made Easy"
         subtitle=""
       />
-      <div className="flex flex-col w-2/3 my-4 h-fit">
-        <section className="flex flex-col size-fit  bg-white rounded-md shadow-md p-2">
-          <h2 className="bg-white text-black text-2xl">
+      <div className="flex flex-col w-full md:w-5/6 my-4 h-fit">
+        <section className="flex flex-col size-fit bg-white rounded-md shadow-md p-2">
+          <h2 className="flex bg-white text-black text-2xl justify-center items-center">
             Customizing affordable on-site flu shot clinics nationwide since
             1988
           </h2>
