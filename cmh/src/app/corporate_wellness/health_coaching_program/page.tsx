@@ -6,7 +6,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="flex flex-col size-full justify-center items-center mt-24 shadow-md">
-      <h1 className="text-white text-4xl font-semibold">
+      <h1 className="text-white text-4xl font-semibold text-center">
         Health Coaching Program
       </h1>
       <section className="flex flex-col justify-start bg-white w-full md:w-2/3 h-fit my-3 p-4 rounded-md shadow-md">

@@ -10,7 +10,7 @@ const page = () => {
         path="/biometric_screening_cover.jpg"
         subtitle=""
       />
-      <section className="flex flex-col justify-center items-center w-5/6 md:w-3/5">
+      <section className="flex flex-col justify-center items-center w-full md:w-3/5">
         <Article
           title="On Site Biometric Wellness Screenings"
           paragraps={[

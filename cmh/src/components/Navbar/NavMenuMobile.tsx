@@ -27,7 +27,6 @@ type DropdownLink = {
 };
 
 interface NavMenuMobileProps {
-  //Ubuduce i trigger name
   hamburgerLinks: Array<Link> | null;
   hamburgerDropdowns: Array<DropdownLink> | null;
 }
@@ -37,11 +36,11 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({
   hamburgerDropdowns,
 }) => {
   return (
-    <div className="md:hidden flex size-fit items-center justify-center bg-green-400 border-green-300 border-2 rounded-md hover:bg-green-300 hover:border-gray-400">
+    <div className="md:hidden flex size-fit items-center justify-center bg-transparent rounded-md hover:bg-green-200 hover:border-gray-400">
       <DropdownMenu>
         <DropdownMenuTrigger
           asChild
-          className="flex justify-center items-center size-16"
+          className="flex justify-center items-center size-16 p-3"
         >
           <Menu className="flex" />
         </DropdownMenuTrigger>
@@ -70,7 +69,11 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({
                   {dropdown.name}
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
-                  <DropdownMenuSubContent className="">
+                  <DropdownMenuSubContent
+                    sideOffset={-80}
+                    alignOffset={30}
+                    className=""
+                  >
                     {dropdown.links.map((link, link_index) => {
                       return (
                         <DropdownMenuItem

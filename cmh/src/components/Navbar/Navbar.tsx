@@ -6,7 +6,7 @@ import NavMenuMobile from "./NavMenuMobile";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="fixed w-full top-0 z-10 flex justify-center items-center h-20 bg-white backdrop-filter backdrop-blur-lg bg-opacity-35">
+    <nav className="fixed px-2 w-full top-0 z-10 flex justify-center items-center h-20 bg-white backdrop-filter backdrop-blur-lg bg-opacity-35">
       <div className="flex justify-between w-full md:flex md:flex-row md:justify-center md:items-center">
         <Logo />
         <NavMenu />
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
           ]}
         />
         <Contact
-          style="hidden p-1 bg-white rounded-md cursor-pointer md:flex md:justify-center md:items-center hover:bg-green-200"
+          style="hidden p-1 bg-white rounded-md shadow-md cursor-pointer md:flex md:justify-center md:items-center hover:bg-green-600 hover:text-white"
           email="nickib@completemobile-health.com"
           phone="414-213-6543"
         />

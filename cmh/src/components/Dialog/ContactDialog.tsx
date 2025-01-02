@@ -29,7 +29,7 @@ const ContactDialog: React.FC<ContactDialogProps> = ({
         <p>{triggerEmail}</p>
         <p>{triggerPhone}</p>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="mx-1 rounded-md">
         <DialogHeader>
           <DialogTitle>
             <span>Provide your contact information so we can get in touch</span>
