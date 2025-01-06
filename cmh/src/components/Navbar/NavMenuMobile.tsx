@@ -36,7 +36,7 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({
   hamburgerDropdowns,
 }) => {
   return (
-    <div className="md:hidden flex size-fit items-center justify-center bg-transparent rounded-md hover:bg-green-200 hover:border-gray-400">
+    <div className="md:hidden flex size-fit items-center justify-center bg-transparent rounded-md">
       <DropdownMenu>
         <DropdownMenuTrigger
           asChild
@@ -44,15 +44,18 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({
         >
           <Menu className="flex" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="bg-white border-2 space-y-1 border-green-700 rounded-sm">
-          <DropdownMenuLabel className="flex justify-center items-center">
+        <DropdownMenuContent
+          className="
+        bg-white border-2 space-y-1 border-none rounded-sm"
+        >
+          <DropdownMenuLabel className="flex justify-center items-center font-semibold">
             Menu
           </DropdownMenuLabel>
-          <DropdownMenuSeparator className="bg-green-400 w-full h-1" />
+          <DropdownMenuSeparator className="bg-green-400 w-full h-0.5 rounded-lg shadow-sm shadow-green-300 mx-1" />
           {/*//! DYNAMIC START */}
           {hamburgerLinks?.map((link, index) => {
             return (
-              <DropdownMenuItem key={index} className="flex size-full">
+              <DropdownMenuItem asChild key={index} className="flex size-full">
                 <Link
                   href={link.path}
                   className="flex size-full justify-center items-center rounded-md hover:bg-green-200"
@@ -65,7 +68,7 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({
           {hamburgerDropdowns?.map((dropdown, index) => {
             return (
               <DropdownMenuSub key={index}>
-                <DropdownMenuSubTrigger className="">
+                <DropdownMenuSubTrigger className="text-md hover:bg-green-200">
                   {dropdown.name}
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
@@ -77,12 +80,13 @@ const NavMenuMobile: React.FC<NavMenuMobileProps> = ({
                     {dropdown.links.map((link, link_index) => {
                       return (
                         <DropdownMenuItem
+                          asChild
                           key={link_index}
-                          className="flex size-full"
+                          className="flex size-full hover:bg-green-200 rounded-md "
                         >
                           <Link
                             href={link.path}
-                            className="flex size-full justify-center items-center rounded-md hover:bg-green-200"
+                            className="flex size-full justify-center items-center "
                           >
                             {link.name}
                           </Link>

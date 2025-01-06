@@ -20,14 +20,20 @@ const NavDropdownMenu: React.FC<DropdownMenuProps> = ({ links }) => {
         Corporate Wellness Services
       </DropdownMenuTrigger>
       <DropdownMenuContent className="">
-        <DropdownMenuItem>
-          <Link href="/corporate_wellness">Our services</Link>
+        <DropdownMenuItem asChild>
+          <Link
+            className="hover:bg-green-200 rounded-md"
+            href="/corporate_wellness"
+          >
+            Our services
+          </Link>
         </DropdownMenuItem>
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator className="bg-green-400 w-full h-0.5 rounded-lg shadow-sm shadow-green-300" />
         {links.map((link, index) => {
           return (
-            <DropdownMenuItem key={index}>
+            <DropdownMenuItem asChild key={index}>
               <Link
+                className="hover:bg-green-200 rounded-md"
                 href={`/corporate_wellness/${toLowerCaseUnderscores(link)}`}
               >
                 {link}

@@ -9,8 +9,8 @@ const Logo: React.FC = () => {
 
   return (
     <div
-      className="flex items-center h-full rounded-md 
-    hover:shadow-lg hover:shadow-white"
+      className="flex items-center mt-1 md:mt-0 h-full rounded-md 
+                 hover:shadow-lg hover:shadow-white"
     >
       <Image
         className="cursor-pointer rounded-md"
