@@ -2,7 +2,7 @@ import ContactDialog from "@/components/Dialog/ContactDialog";
 import ApplicationForm from "@/components/Forms/ApplicationForm";
 import ContactForm from "@/components/Forms/ContactForm";
 import HomeInfoSegment from "@/components/Segments/HomeInfoSegment";
-import HomePicture from "@/components/Segments/HomePicture";
+import PageTitlePicture from "@/components/Content/PageTitlePicture";
 import React from "react";
 
 //!UVEK SPOLJNI DIV CONTAINER ZOBG PAGE LAYOUT
@@ -14,8 +14,13 @@ const Home = () => {
       {/* ............ */}
 
       {/*//?Home Picture*/}
-      <div className="flex w-5/6 h-full rounded-md my-1">
-        <HomePicture />
+      <div className="flex w-full h-full rounded-md my-1">
+        <PageTitlePicture
+          imagePath="/stock1.png"
+          imageAlt="An image of a blood test"
+          title="Complete Mobile Health Is Your Corporate Wellness Company"
+          description="Custom corporate wellness programs for your employees. On-site biometric screenings, blood testing, and reporting."
+        />
       </div>
 
       <div className="flex flex-col flex-wrap-reverse justify-center items-center my-4">
