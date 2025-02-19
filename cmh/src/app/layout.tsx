@@ -7,6 +7,23 @@ import Footer from "@/components/Footer/Footer";
 export const metadata: Metadata = {
   title: "Complete Mobile Health",
   description: "Drug testing company based in Wisconsin, USA",
+  manifest: "/manifest.ts",
+  robots: {
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    siteName: "Complete Mobile Health",
+    type: "website",
+    title: "Complete Mobile Health Is Your Corporate Wellness Company",
+    description:
+      "Custom corporate wellness programs for your employees. On-site biometric screenings, blood testing, and reporting.",
+    images: "https://cmh-test.vercel.app/cmh_logo_2.jpg",
+  },
 };
 
 export default function RootLayout({
