@@ -63,6 +63,7 @@ const Home = () => {
               linkPath: "/corporate_wellness/flu_shots",
               imageSrc: "/flu_shot.jpg",
               imageAlt: "Image of a flu shot",
+              buttonText: "Find out more about flu shots",
             },
             {
               title: "Corporate Wellness",
@@ -71,6 +72,7 @@ const Home = () => {
               linkPath: "/corporate_wellness",
               imageSrc: "/corporate_wellness.jpg",
               imageAlt: "Healthy, content person",
+              buttonText: "All corporate services we provide",
             },
             {
               title: "Biometric Screening",
@@ -79,6 +81,7 @@ const Home = () => {
               linkPath: "/corporate_wellness/biometric_screenings",
               imageSrc: "/biometric_screening.jpg",
               imageAlt: "A doctor performing a blood pressure test",
+              buttonText: "Learn about biometric screenings",
             },
             {
               title: "DNA Paternity Testing",
@@ -86,6 +89,7 @@ const Home = () => {
               linkPath: "/corporate_wellness/dna_paternity_testing",
               imageSrc: "/dna_test.png",
               imageAlt: "A DNA test",
+              buttonText: "Learn more about dna paternity testing",
             },
           ]}
         />

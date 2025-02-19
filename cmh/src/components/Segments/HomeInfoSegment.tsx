@@ -9,6 +9,7 @@ export type TInfoCard = {
   linkPath: string;
   imageSrc: string;
   imageAlt: string;
+  buttonText: string;
 };
 
 interface HomeInfoSegmentProps {
@@ -31,6 +32,7 @@ const HomeInfoSegment: React.FC<HomeInfoSegmentProps> = ({ infoCards }) => {
               linkPath={card.linkPath}
               imageSrc={card.imageSrc}
               imageAlt={card.imageAlt}
+              buttonText={card.buttonText}
             />
           );
         })}

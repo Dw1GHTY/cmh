@@ -10,12 +10,14 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+
 interface InfoCardProps {
   title?: string;
   content?: string;
   linkPath: string;
   imageSrc: string;
   imageAlt: string;
+  buttonText: string;
 }
 
 const ImageInfoCard: React.FC<InfoCardProps> = ({
@@ -24,6 +26,7 @@ const ImageInfoCard: React.FC<InfoCardProps> = ({
   linkPath,
   imageSrc,
   imageAlt,
+  buttonText,
 }) => {
   const router = useRouter();
   return (
@@ -57,9 +60,10 @@ const ImageInfoCard: React.FC<InfoCardProps> = ({
       <CardFooter className="flex justify-between">
         <Link
           href={`${linkPath}`}
-          className="px-4 py-2 bg-green-600 text-white hover:bg-green-400 cursor-pointer rounded-md transition delay-75"
+          className="px-4 py-2 bg-green-600 text-white text-center text-wrap
+           hover:bg-green-400 cursor-pointer rounded-md transition delay-75"
         >
-          Learn More
+          {buttonText}
         </Link>
       </CardFooter>
     </Card>
