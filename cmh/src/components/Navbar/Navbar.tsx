@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
                 },
                 {
                   name: "Drug Testing Services",
-                  path: "/corporate_wellness/",
+                  path: "/corporate_wellness/drug_testing_services",
                 },
                 {
                   name: "DNA Paternity Testing",
