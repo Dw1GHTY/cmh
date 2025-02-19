@@ -22,7 +22,11 @@ const PageImage: React.FC<PageImageProps> = ({ path, title, subtitle }) => {
         priority
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center bg-black/20 text-white">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center">
+        <h1
+          className="
+          text-center text-3xl md:text-5xl 
+          font-bold mb-4 italic"
+        >
           {title}
         </h1>
         <p className="text-sm md:text-lg text-center">{subtitle}</p>

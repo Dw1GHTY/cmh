@@ -7,7 +7,12 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import Image from "next/image";
-import { TCarouselElement } from "@/types/TCarouselElement";
+
+export type TCarouselElement = {
+  imageSrc: string;
+  imageAlt: string;
+  description?: string;
+};
 
 interface HomeCarouselProps {
   images?: Array<TCarouselElement>;

@@ -1,5 +1,5 @@
-import Article from "@/components/Article";
-import PageImage from "@/components/PageImage";
+import Article from "@/components/Content/Article";
+import PageImage from "@/components/Content/PageImage";
 import Image from "next/image";
 import React from "react";
 

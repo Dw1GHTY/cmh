@@ -1,7 +1,7 @@
 import React from "react";
-import { Separator } from "../ui/separator";
 import Link from "next/link";
 import NavDropdownMenu from "./NavDropdownMenu";
+import { Separator } from "../ui/separator";
 
 const NavMenu: React.FC = () => {
   return (
@@ -18,7 +18,8 @@ const NavMenu: React.FC = () => {
       <Separator orientation="vertical" className="bg-slate-500 h-8" />
       <Link
         href="/corporate_wellness/flu_shots"
-        className="flex justify-center items-center px-1 font-semibold rounded-md hover:bg-green-600 hover:text-white h-10"
+        className="flex justify-center items-center h-10 px-1 font-semibold rounded-md 
+        hover:bg-green-600 hover:text-white transition delay-75"
       >
         Flu Shots
       </Link>

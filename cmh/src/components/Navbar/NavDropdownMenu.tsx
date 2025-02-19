@@ -16,7 +16,10 @@ interface DropdownMenuProps {
 const NavDropdownMenu: React.FC<DropdownMenuProps> = ({ links }) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="h-10 px-1 font-semibold rounded-md hover:bg-green-600 hover:text-white">
+      <DropdownMenuTrigger
+        className="h-10 px-1 font-semibold rounded-md 
+      hover:bg-green-600 hover:text-white transition delay-75"
+      >
         Corporate Wellness Services
       </DropdownMenuTrigger>
       <DropdownMenuContent className="">
@@ -31,9 +34,13 @@ const NavDropdownMenu: React.FC<DropdownMenuProps> = ({ links }) => {
         <DropdownMenuSeparator className="bg-green-400 w-full h-0.5 rounded-lg shadow-sm shadow-green-300" />
         {links.map((link, index) => {
           return (
-            <DropdownMenuItem asChild key={index}>
+            <DropdownMenuItem
+              asChild
+              key={index}
+              className="hover:bg-green-200 transition delay-75"
+            >
               <Link
-                className="hover:bg-green-200 rounded-md"
+                className="rounded-md hover:bg-green-200 transition delay-75"
                 href={`/corporate_wellness/${toLowerCaseUnderscores(link)}`}
               >
                 {link}

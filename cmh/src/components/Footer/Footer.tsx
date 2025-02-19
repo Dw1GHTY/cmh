@@ -3,6 +3,9 @@ import Logo from "../Logo";
 import Legal from "./Legal";
 import FooterLinksSegment from "./FooterLinksSegment";
 import FooterInfo from "./FooterInfo";
+import PopupDialog from "../Dialog/PopupDialog";
+import ContactForm from "../Forms/ContactForm";
+import ApplicationForm from "../Forms/ApplicationForm";
 
 const Footer: React.FC = () => {
   return (
@@ -11,25 +14,56 @@ const Footer: React.FC = () => {
       <section className="flex flex-row flex-wrap justify-between items-start w-full">
         {/* Logo on the Left */}
         <div className="flex w-full mb-2 justify-center items-center md:w-1/5">
-          <Logo />
+          <Logo height={100} width={250} />
         </div>
 
         {/* Links in the Middle */}
-        <div className="flex flex-1 justify-center">
-          <div className="flex flex-row">
+        <div className="flex flex-1 justify-center items-center">
+          <div
+            className="
+          flex flex-col 
+          md:grid md:grid-cols-2 lg:grid-cols-4
+          space-y-3 md:space-y-0 lg:space-y-0"
+          >
+            <FooterLinksSegment
+              links={[
+                //! contact form dialog
+                {
+                  component: (
+                    <PopupDialog
+                      triggerStyle="p-1 italic font-semibold text-center text-wrap bg-slate-200 rounded-md hover:bg-green-400 hover:ring-1 ring-green-600 transition delay-75"
+                      triggerText={["Contact Complete Mobile Health"]}
+                      dialogTitle="Provide your contact information so we can get in touch"
+                      dialogDescription="By pressing submit, an email will be sent to us with your provided information, we will get in touch as soon as possible."
+                    >
+                      <ContactForm />
+                    </PopupDialog>
+                  ),
+                },
+                //! application form dialog
+                {
+                  component: (
+                    <PopupDialog
+                      triggerStyle="p-1 italic font-semibold text-center text-wrap bg-slate-200 rounded-md hover:bg-green-400 hover:ring-1 ring-green-600 transition delay-75"
+                      triggerText={["Apply for a position"]}
+                      dialogTitle="Provide your contact information so we can get in touch and discuss your potential hiring!"
+                      dialogDescription="By pressing submit, an email will be sent to us with your provided information, we will get in touch as soon as possible."
+                    >
+                      <ApplicationForm />
+                    </PopupDialog>
+                  ),
+                },
+              ]}
+            />
             <FooterLinksSegment
               links={[
                 {
                   name: "Bilingual Advantage",
                   linkPath: "/bilingual_advantage",
                 },
-                // {
-                //   name: "Certifications",
-                //   linkPath: "/certifications",
-                // },
                 {
-                  name: "Contact Complete Mobile Health",
-                  linkPath: "contact", // Open dialog
+                  name: "Certifications",
+                  linkPath: "/certifications",
                 },
               ]}
             />

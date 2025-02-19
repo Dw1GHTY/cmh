@@ -1,5 +1,5 @@
 import ParagraphCard from "@/components/Cards/ParagraphCard";
-import PageImage from "@/components/PageImage";
+import PageImage from "@/components/Content/PageImage";
 import React from "react";
 
 const page = () => {
@@ -8,7 +8,7 @@ const page = () => {
       <PageImage
         path="/corporate_wellness_cover.jpg"
         title="Corporate Wellness Services"
-        subtitle=""
+        subtitle="All of our services in one place"
       />
       <div className="flex flex-col justify-center items-center w-full h-fit">
         {/* //!ARTICLE */}

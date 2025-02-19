@@ -1,5 +1,5 @@
-import PageImage from "@/components/PageImage";
-import Paragraph from "@/components/Paragraph";
+import PageImage from "@/components/Content/PageImage";
+import Paragraph from "@/components/Content/Paragraph";
 import React from "react";
 
 const page = () => {

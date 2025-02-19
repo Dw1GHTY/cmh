@@ -13,7 +13,7 @@ const PageTitlePicture: React.FC<PageTitlePictureProps> = (props) => {
   return (
     <div
       className="
-    relative w-full h-96 mt-20 mb-10 font-sans 
+    relative w-full md:w-2/3 h-96 mt-20 mb-10 font-sans 
     rounded-md shadow-md shadow-green-300"
     >
       {/* Background Image */}
@@ -26,7 +26,7 @@ const PageTitlePicture: React.FC<PageTitlePictureProps> = (props) => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center px-4 italic">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center px-4 italic rounded-md">
         {title && <h1 className="text-4xl md:text-6xl font-bold">{title}</h1>}
         {description && <p className="text-lg mt-2">{description}</p>}
       </div>

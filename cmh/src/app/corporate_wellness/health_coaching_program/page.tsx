@@ -1,14 +1,17 @@
 import ParagraphCard from "@/components/Cards/ParagraphCard";
+import PageImage from "@/components/Content/PageImage";
 import React from "react";
 
 //!FULL STATIC CONTENT, CANCER PAGE
 
 const page = () => {
   return (
-    <div className="flex flex-col size-full justify-center items-center mt-24 shadow-md">
-      <h1 className="text-white text-4xl font-semibold text-center">
-        Health Coaching Program
-      </h1>
+    <div className="flex flex-col size-full justify-center items-center shadow-md">
+      <PageImage
+        path="/health-coaching.jpg"
+        title="Health Coaching Program"
+        subtitle=""
+      />
       <section className="flex flex-col justify-start bg-white w-full md:w-2/3 h-fit my-3 p-4 rounded-md shadow-md">
         <article>
           Coaching is a client-centered, relationship-based process which

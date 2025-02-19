@@ -1,11 +1,10 @@
-import ContactDialog from "@/components/Dialog/ContactDialog";
 import ApplicationForm from "@/components/Forms/ApplicationForm";
 import ContactForm from "@/components/Forms/ContactForm";
 import HomeInfoSegment from "@/components/Segments/HomeInfoSegment";
 import PageTitlePicture from "@/components/Content/PageTitlePicture";
 import React from "react";
-
-//!UVEK SPOLJNI DIV CONTAINER ZOBG PAGE LAYOUT
+import { Separator } from "@/components/ui/separator";
+import PopupDialog from "@/components/Dialog/PopupDialog";
 
 const Home = () => {
   return (
@@ -14,34 +13,44 @@ const Home = () => {
       {/* ............ */}
 
       {/*//?Home Picture*/}
-      <div className="flex w-full h-full rounded-md my-1">
+      <section className="flex w-full h-full items-center justify-center rounded-md my-1">
         <PageTitlePicture
           imagePath="/stock1.png"
           imageAlt="An image of a blood test"
           title="Complete Mobile Health Is Your Corporate Wellness Company"
           description="Custom corporate wellness programs for your employees. On-site biometric screenings, blood testing, and reporting."
         />
-      </div>
+      </section>
+      <Separator className="w-2/3 md:w-1/2 bg-white h-1 rounded-md mb-2" />
 
-      <div className="flex flex-col flex-wrap-reverse justify-center items-center my-4">
-        <h2 className="flex text-white text-xl">Contact us</h2>
-        <div className="flex flex-row space-x-2">
-          <ContactDialog
-            triggerPhone=""
-            triggerEmail="Have a question?"
-            triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
+      {/* //? Contact us */}
+      <section className="flex flex-col flex-wrap-reverse justify-center items-center my-4">
+        <h2
+          className="flex mb-2 
+        italic font-semibold text-white text-center text-2xl md:text-6xl p-1"
+        >
+          Contact us
+        </h2>
+        <div className="flex flex-row space-x-2 mb-2">
+          <PopupDialog
+            triggerStyle="text-center bg-white rounded-md p-2 transition delay-75 bg-slate-100 text-black rounded-md md:size-fit hover:bg-green-200 hover:ring-1 ring-green-700"
+            triggerText={["Have a question?"]}
+            dialogTitle="Provide your contact information so we can get in touch"
+            dialogDescription="By pressing submit, an email will be sent to us with your provided information, we will get in touch as soon as possible."
           >
             <ContactForm />
-          </ContactDialog>
-          <ContactDialog
-            triggerPhone=""
-            triggerEmail="Want to partner with us?"
-            triggerStyle="bg-slate-100 text-black rounded-md md:size-fit p-2 hover:bg-green-200"
+          </PopupDialog>
+          <PopupDialog
+            triggerStyle="text-center bg-white rounded-md p-2 transition delay-75 bg-slate-100 text-black rounded-md md:size-fit hover:bg-green-200 hover:ring-1 ring-green-700"
+            triggerText={["Want to partner with us?"]}
+            dialogTitle="Provide your contact information so we can get in touch and discuss your potential hiring!"
+            dialogDescription="By pressing submit, an email will be sent to us with your provided information, we will get in touch as soon as possible."
           >
             <ApplicationForm />
-          </ContactDialog>
+          </PopupDialog>
         </div>
-      </div>
+      </section>
+      <Separator className="w-2/3 md:w-1/2 bg-white h-1 rounded-md " />
 
       {/*//? cards */}
       <section className="flex w-full justify-center items-center">

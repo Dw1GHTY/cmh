@@ -1,15 +1,17 @@
 import React from "react";
 import Logo from "../Logo";
 import NavMenu from "./NavMenu";
-import Contact from "../Contact";
 import NavMenuMobile from "./NavMenuMobile";
+import PopupDialog from "../Dialog/PopupDialog";
+import ContactForm from "../Forms/ContactForm";
 
 const Navbar: React.FC = () => {
   return (
     <nav
       className="fixed px-2 w-full top-0 z-10 
                     flex justify-center items-center md:justify-center 
-                    h-16 bg-white backdrop-filter backdrop-blur-lg bg-opacity-35"
+                    h-16 bg-white backdrop-filter backdrop-blur-lg bg-opacity-35
+                    border-b border-green-400 shadow-sm shadow-green-300"
     >
       <div className="flex justify-between w-full md:flex md:flex-row md:justify-center md:items-center">
         <Logo />
@@ -27,6 +29,10 @@ const Navbar: React.FC = () => {
             {
               name: "Screenings",
               path: "/corporate_wellness/screenings",
+            },
+            {
+              name: "Certifications",
+              path: "/certifications",
             },
           ]}
           hamburgerDropdowns={[
@@ -53,11 +59,15 @@ const Navbar: React.FC = () => {
             },
           ]}
         />
-        <Contact
-          style="hidden p-1 bg-white rounded-md shadow-md cursor-pointer md:flex md:justify-center md:items-center hover:bg-green-600 hover:text-white"
-          email="nickib@completemobile-health.com"
-          phone="414-213-6543"
-        />
+        <PopupDialog
+          triggerStyle="hidden p-1 bg-white rounded-md shadow-md cursor-pointer text-nowrap md:flex md:justify-center md:items-center
+          hover:bg-green-400 hover:ring-1 ring-green-800 transition delay-75"
+          triggerText={["nickib@completemobile-health.com", "414-213-6543"]}
+          dialogTitle="Provide your contact information so we can get in touch"
+          dialogDescription="By pressing submit, an email will be sent to us with your provided information, we will get in touch as soon as possible."
+        >
+          <ContactForm />
+        </PopupDialog>
       </div>
     </nav>
   );

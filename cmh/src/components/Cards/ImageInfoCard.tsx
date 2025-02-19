@@ -32,7 +32,8 @@ const ImageInfoCard: React.FC<InfoCardProps> = ({
         router.push(`${linkPath}`);
       }}
       className="w-[300px] max-w-full bg-slate-100 rounded-md text-black my-2
-     shadow-white shadow-sm hover:shadow-white hover:shadow-lg cursor-pointer"
+     shadow-white shadow-sm 
+     hover:shadow-white hover:shadow-lg transition delay-75 cursor-pointer"
     >
       <div className="relative overflow-hidden group">
         <Image
@@ -56,7 +57,7 @@ const ImageInfoCard: React.FC<InfoCardProps> = ({
       <CardFooter className="flex justify-between">
         <Link
           href={`${linkPath}`}
-          className="px-4 py-2 bg-green-600 text-white hover:bg-green-400 cursor-pointer rounded-md"
+          className="px-4 py-2 bg-green-600 text-white hover:bg-green-400 cursor-pointer rounded-md transition delay-75"
         >
           Learn More
         </Link>

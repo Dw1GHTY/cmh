@@ -1,4 +1,4 @@
-import Paragraph from "@/components/Paragraph";
+import Paragraph from "@/components/Content/Paragraph";
 import React from "react";
 
 const page = () => {

@@ -5,7 +5,7 @@ interface LegalProps {
 }
 
 const Legal: React.FC<LegalProps> = ({ text }) => {
-  return <p className="flex text-center text-sm mt-2">{text}</p>;
+  return <p className="flex text-center text-wrap text-sm mt-2">{text}</p>;
 };
 
 export default Legal;

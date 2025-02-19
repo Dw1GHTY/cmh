@@ -1,6 +1,15 @@
 import React from "react";
 import ImageInfoCard from "../Cards/ImageInfoCard";
-import { TInfoCard } from "@/types/TInfoCard";
+
+export type TInfoCard = {
+  title?: string;
+  description?: string;
+  content?: string;
+  footer?: string;
+  linkPath: string;
+  imageSrc: string;
+  imageAlt: string;
+};
 
 interface HomeInfoSegmentProps {
   infoCards: Array<TInfoCard>;
