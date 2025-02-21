@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar/Navbar";
@@ -33,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <body className="flex flex-col min-h-screen w-screen bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat bg-slate-200 ">
         <header className="flex h-fit">
           <Navbar />
