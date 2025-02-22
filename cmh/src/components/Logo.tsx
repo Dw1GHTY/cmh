@@ -23,7 +23,7 @@ const Logo: React.FC<LogoProps> = (props) => {
           router.push("/");
         }}
         alt="Complete Mobile Health logo"
-        src={`/cmh_logo_2.jpg`}
+        src={`/cmh_logo_white.jpg`}
         width={width ? width : 150}
         height={height ? height : 40}
         style={{ objectFit: "contain" }}
