@@ -2,7 +2,21 @@ import Article from "@/components/Content/Article";
 import PageImage from "@/components/Content/PageImage";
 import Image from "next/image";
 import React from "react";
+import { Metadata } from "next";
 
+export const generateMetadata = (): Metadata => ({
+  title: "Certifications | Complete Mobile Health",
+  description:
+    "Explore our professional certifications that ensure quality healthcare services.",
+  openGraph: {
+    title: "Why Trust Us? Check Our Healthcare Certifications!",
+    description:
+      "Complete Mobile Health is backed by top industry certifications for reliable and professional healthcare services.",
+    images: "https://completemobile-health.com/certifications.jpg",
+    url: "https://completemobile-health.com/certifications",
+    type: "article",
+  },
+});
 const page = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">

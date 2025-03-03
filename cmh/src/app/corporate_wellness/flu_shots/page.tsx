@@ -1,6 +1,21 @@
 import PageImage from "@/components/Content/PageImage";
 import Paragraph from "@/components/Content/Paragraph";
 import React from "react";
+import { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => ({
+  title: "Flu Shots | Complete Mobile Health",
+  description:
+    "Protect your team with on-site flu shots and vaccination services.",
+  openGraph: {
+    title: "Stay Healthy This Season – Get Your Flu Shot Today!",
+    description:
+      "Our on-site flu shot services keep your employees protected during flu season. Schedule vaccinations now!",
+    images: "https://completemobile-health.com/flu_shot.jpg",
+    url: "https://completemobile-health.com/corporate_wellness/flu_shots",
+    type: "article",
+  },
+});
 
 const page = () => {
   return (

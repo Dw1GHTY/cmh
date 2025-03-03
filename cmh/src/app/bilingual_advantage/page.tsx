@@ -1,5 +1,16 @@
 import Paragraph from "@/components/Content/Paragraph";
+import { Metadata } from "next";
 import React from "react";
+
+export const generateMetadata = (): Metadata => ({
+  title: "Bilingual Advantage | Complete Mobile Health",
+  description: "Wellness services we provide for Spanish speaking employess",
+  openGraph: {
+    title:
+      "English is not your mother tongue? We provide bilingual advantages!",
+    description: "Wellness services we provide for Spanish speaking employess!",
+  },
+});
 
 const page = () => {
   return (

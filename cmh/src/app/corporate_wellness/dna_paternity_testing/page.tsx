@@ -1,6 +1,21 @@
 import Article from "@/components/Content/Article";
 import PageImage from "@/components/Content/PageImage";
 import React from "react";
+import { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => ({
+  title: "DNA Paternity Testing | Complete Mobile Health",
+  description:
+    "Accurate and confidential DNA paternity testing services with fast results.",
+  openGraph: {
+    title: "Need DNA Paternity Testing? Get Fast & Reliable Results!",
+    description:
+      "Complete Mobile Health offers professional DNA paternity testing services with confidentiality and accuracy.",
+    images: "https://completemobile-health.com/dna_test.png",
+    url: "https://completemobile-health.com/corporate_wellness/dna_paternity_testing",
+    type: "article",
+  },
+});
 
 const page = () => {
   return (

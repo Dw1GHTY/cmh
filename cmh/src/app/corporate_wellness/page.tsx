@@ -1,6 +1,21 @@
 import ParagraphCard from "@/components/Cards/ParagraphCard";
 import PageImage from "@/components/Content/PageImage";
+import { Metadata } from "next";
 import React from "react";
+
+export const generateMetadata = (): Metadata => ({
+  title: "Corporate Wellness Programs | Complete Mobile Health",
+  description:
+    "Boost employee health and productivity with our customized corporate wellness programs.",
+  openGraph: {
+    title: "Elevate Your Workforce with Custom Corporate Wellness Plans!",
+    description:
+      "Enhance workplace wellness with biometric screenings, health coaching, and more. A healthier team is a stronger team!",
+    images: "https://completemobile-health.com/corporate_wellness_cover.jpg",
+    url: "https://completemobile-health.com/corporate_wellness",
+    type: "article",
+  },
+});
 
 const page = () => {
   return (

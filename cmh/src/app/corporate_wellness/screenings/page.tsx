@@ -1,5 +1,20 @@
 import Article from "@/components/Content/Article";
 import React from "react";
+import { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => ({
+  title: "Health Screenings | Complete Mobile Health",
+  description:
+    "Early detection and preventive screenings to ensure long-term health and wellness.",
+  openGraph: {
+    title: "Early Detection Saves Lives – Book Your Health Screening!",
+    description:
+      "Comprehensive health screenings to help detect risks early and maintain a healthier lifestyle.",
+    //images: "https://completemobile-health.com/health-screenings.jpg",
+    url: "https://completemobile-health.com/corporate_wellness/screenings",
+    type: "article",
+  },
+});
 
 const page = () => {
   return (

@@ -1,6 +1,21 @@
 import Article from "@/components/Content/Article";
 import PageImage from "@/components/Content/PageImage";
 import React from "react";
+import { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => ({
+  title: "Biometric Screenings | Complete Mobile Health",
+  description:
+    "Comprehensive biometric screenings to assess employee health and well-being.",
+  openGraph: {
+    title: "Get a Clear Picture of Your Health with Biometric Screenings!",
+    description:
+      "Our biometric screenings provide key health insights to help you take control of your well-being.",
+    images: "https://completemobile-health.com/biometric_screening.jpg",
+    url: "https://completemobile-health.com/corporate_wellness/biometric_screenings",
+    type: "article",
+  },
+});
 
 const page = () => {
   return (

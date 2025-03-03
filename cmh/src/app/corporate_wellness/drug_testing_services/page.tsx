@@ -1,6 +1,21 @@
 import Article from "@/components/Content/Article";
 import PageImage from "@/components/Content/PageImage";
 import React from "react";
+import { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => ({
+  title: "Drug Testing Services | Complete Mobile Health",
+  description:
+    "Reliable workplace drug testing services for a safe and compliant work environment.",
+  openGraph: {
+    title: "Ensure Workplace Safety with Our Drug Testing Services!",
+    description:
+      "Comprehensive and legally compliant drug testing solutions for employers and organizations.",
+    images: "https://completemobile-health.com/drug_test_cover.jpg",
+    url: "https://completemobile-health.com/corporate_wellness/drug_testing_services",
+    type: "article",
+  },
+});
 
 const page = () => {
   return (

@@ -1,8 +1,21 @@
 import ParagraphCard from "@/components/Cards/ParagraphCard";
 import PageImage from "@/components/Content/PageImage";
 import React from "react";
+import { Metadata } from "next";
 
-//!FULL STATIC CONTENT, CANCER PAGE
+export const generateMetadata = (): Metadata => ({
+  title: "Health Coaching Program | Complete Mobile Health",
+  description:
+    "Personalized health coaching programs to improve employee well-being and lifestyle.",
+  openGraph: {
+    title: "Transform Your Health with Our Expert Coaching Program!",
+    description:
+      "Achieve your health goals with personalized coaching and guidance from wellness professionals.",
+    images: "https://completemobile-health.com/health-coaching.jpg",
+    url: "https://completemobile-health.com/corporate_wellness/health_coaching_program",
+    type: "article",
+  },
+});
 
 const page = () => {
   return (
