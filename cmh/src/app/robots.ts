@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/email/contact", "/api/email/apply"],
       },
     ],
-    sitemap: "https://cmh-test.vercel.app/sitemap.xml",
+    sitemap: "https://completemobile-health.com/sitemap.xml",
   };
 }

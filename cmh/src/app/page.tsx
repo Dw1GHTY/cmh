@@ -10,7 +10,6 @@ const Home = () => {
   return (
     <div className="flex justify-center items-center flex-col space-y-3 w-screen">
       {/*//?About us*/}
-      {/* ............ */}
 
       {/*//?Home Picture*/}
       <section className="flex w-full h-full items-center justify-center rounded-md my-1">
