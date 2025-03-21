@@ -8,7 +8,7 @@ interface ParagraphProps {
 const Paragraph: React.FC<ParagraphProps> = ({ title, text }) => {
   return (
     <>
-      <h3 className="text-green-600 text-lg">{title}</h3>
+      <h3 className="text-green-600 text-xl">{title}</h3>
       <p className="text-black">{text}</p>
     </>
   );

@@ -2,6 +2,8 @@ import PageImage from "@/components/Content/PageImage";
 import Paragraph from "@/components/Content/Paragraph";
 import React from "react";
 import { Metadata } from "next";
+import PopupDialog from "@/components/Dialog/PopupDialog";
+import ContactForm from "@/components/Forms/ContactForm";
 
 export const generateMetadata = (): Metadata => ({
   title: "Flu Shots | Complete Mobile Health",
@@ -48,24 +50,34 @@ const page = () => {
               text="With over a decade of experience, Complete Mobile Health provides highly trained RNs, NPs and MDs to administer flu vaccinations. We abide by all government safety standards. Even during the H1N1 crisis, we secured and delivered vaccinations for all of our on-site clinics, as promised."
             />
             <br />
-            <h3 className="text-green-600 text-lg">Competitive Pricing</h3>
+            <h3 className="text-green-600 text-xl">Competitive Pricing</h3>
             <p>
               We know your bottom line is important. That’s why Complete Mobile
               Health offers volume discounts. And, we’re Medicare approved for
               vaccinations.
             </p>
             <p>
-              Complete Mobile Health Testing Services Bills Insurance or
-              Medicare Directly when applicable.
+              Complete Mobile Health Bills Insurance or Medicare Directly when
+              applicable.
             </p>
             <br />
-            <h4 className="text-black font-semibold">For More Information</h4>
+            <h4 className="text-black font-semibold text-xl">
+              For More Information
+            </h4>
             <p>
               Need information on how Complete Mobile Health can help administer
-              your company’s Flu Vaccine Clinic? Please contact Jo Steinberg at
-              414-213-6543, Nickibenson@completemobile-health.com or use our
-              On-Site Flu Shot Clinic Quote Request.
+              your company’s Flu Vaccine Clinic? Contact us for a quote at:
+              <strong> 414-213-6543</strong>, or email us at:
             </p>
+            <PopupDialog
+              triggerStyle="p-1 font-semibold ring-1 ring-gray-200 bg-white rounded-md shadow-md cursor-pointer text-nowrap md:flex md:justify-center md:items-center
+               hover:bg-green-400 hover:ring-1 ring-green-800 transition delay-75"
+              dialogTitle="Provide your contact information so we can get in touch"
+              dialogDescription="By pressing submit, an email will be sent to us with your provided information, we will get in touch as soon as possible."
+              triggerText={["nickib@completemobile-health.com"]}
+            >
+              <ContactForm />
+            </PopupDialog>
           </article>
         </section>
       </div>
