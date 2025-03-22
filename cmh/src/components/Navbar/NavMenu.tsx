@@ -10,6 +10,7 @@ const NavMenu: React.FC = () => {
       <NavDropdownMenu
         links={[
           "Health Coaching Program",
+          "Wellness Screenings",
           "Biometric Screenings",
           "Drug Testing Services",
           "DNA Paternity Testing",

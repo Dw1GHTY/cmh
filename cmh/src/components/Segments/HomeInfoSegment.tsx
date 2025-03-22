@@ -22,7 +22,7 @@ const HomeInfoSegment: React.FC<HomeInfoSegmentProps> = ({ infoCards }) => {
       <h2 className="flex justify-center items-center text-center mb-2 text-xl md:text-4xl text-white font-semibold">
         Wellness and health programs designed for You!
       </h2>
-      <div className="flex flex-col justify-center items-center md:flex-row md:justify-center md:items-start md:space-x-3">
+      <div className="flex flex-col justify-center items-center flex-wrap md:flex-row md:justify-center md:items-start md:space-x-3">
         {infoCards.map((card, index) => {
           return (
             <ImageInfoCard

@@ -27,8 +27,8 @@ const Navbar: React.FC = () => {
               path: "/corporate_wellness/flu_shots",
             },
             {
-              name: "Screenings",
-              path: "/corporate_wellness/screenings",
+              name: "Wellness Screenings",
+              path: "/corporate_wellness/wellness_screenings",
             },
             {
               name: "Certifications",

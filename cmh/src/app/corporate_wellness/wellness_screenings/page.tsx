@@ -1,6 +1,7 @@
 import Article from "@/components/Content/Article";
 import React from "react";
 import { Metadata } from "next";
+import PageImage from "@/components/Content/PageImage";
 
 export const generateMetadata = (): Metadata => ({
   title: "Health Screenings | Complete Mobile Health",
@@ -11,7 +12,7 @@ export const generateMetadata = (): Metadata => ({
     description:
       "Comprehensive health screenings to help detect risks early and maintain a healthier lifestyle.",
     //images: "https://completemobile-health.com/health-screenings.jpg",
-    url: "https://completemobile-health.com/corporate_wellness/screenings",
+    url: "https://completemobile-health.com/corporate_wellness/wellness_screenings",
     type: "article",
   },
 });
@@ -19,8 +20,12 @@ export const generateMetadata = (): Metadata => ({
 const page = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
-      <h1 className="text-white text-4xl font-semibold">Wellness Screenings</h1>
-      <section className="flex flex-col justify-center items-center w-full mt-24 md:w-1/2">
+      <PageImage
+        path="/wellness_screening_cover.jpg"
+        title="Wellness Screenings"
+        subtitle=""
+      />
+      <section className="flex flex-col justify-center items-center w-full md:w-1/2">
         <Article
           title="On-Site Wellness Screenings"
           paragraps={[
@@ -62,13 +67,6 @@ const page = () => {
             "The HRA provides multiple reports. There is a Participant Report that can be used by the employee on an individual and private basis as well as multiple aggregate reports for program directors to use as an assessment tool for their company population health as a whole.",
           ]}
         />
-        {/*//! removed as per request from NickiB 
-        <Article
-          title="What is the Personal Wellness Profile Advantage?"
-          paragraps={[
-            "With the combination of the on-site screening results and the Lifestyle Questionnaire, your PWP provides a risk report, both for you as an individual as well as your company as a whole, and extensive health improvement resources based on the results from those risk reports.",
-          ]}
-        /> */}
       </section>
     </div>
   );

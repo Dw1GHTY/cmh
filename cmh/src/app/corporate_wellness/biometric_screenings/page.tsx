@@ -1,6 +1,7 @@
 import Article from "@/components/Content/Article";
 import PageImage from "@/components/Content/PageImage";
 import React from "react";
+import Link from "next/link";
 import { Metadata } from "next";
 
 export const generateMetadata = (): Metadata => ({
@@ -26,6 +27,20 @@ const page = () => {
         subtitle=""
       />
       <section className="flex flex-col justify-center items-center w-full md:w-3/5">
+        <div
+          className="flex flex-row
+        bg-white text-center text-xl md:text-2xl rounded-md mt-6 p-2 
+        hover:bg-green-400 hover:ring-1 ring-slate-400 cursor-pointer
+          transition delay-75 text-black"
+        >
+          <Link
+            href="/corporate_wellness/wellness_screenings"
+            className="flex flex-row justify-center items-center size-fu1ll"
+          >
+            Also See{" "}
+            <span className="italic underline ml-1"> Wellness Screenings</span>
+          </Link>
+        </div>
         <Article
           title="On Site Biometric Wellness Screenings"
           paragraps={[

@@ -74,7 +74,16 @@ const Home = () => {
               buttonText: "All corporate services we provide",
             },
             {
-              title: "Biometric Screening",
+              title: "Wellness Screenings",
+              content:
+                "Complete Mobile Health has been supporting employee health through on-site screening since 2003.",
+              linkPath: "/corporate_wellness/wellness_screenings",
+              imageSrc: "/wellness_screening.jpg",
+              imageAlt: "Two persons conversing over a health screening result",
+              buttonText: "Wellness Screenings we provide",
+            },
+            {
+              title: "Biometric Screenings",
               content:
                 "Stabilize your health premiums and learn about your employees wellness with our onsite biometric screenings, testing and reporting.",
               linkPath: "/corporate_wellness/biometric_screenings",

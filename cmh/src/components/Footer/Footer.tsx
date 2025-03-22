@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
                 },
                 {
                   name: "Wellness Screenings",
-                  linkPath: "/corporate_wellness/screenings",
+                  linkPath: "/corporate_wellness/wellness_screenings",
                 },
               ]}
             />
