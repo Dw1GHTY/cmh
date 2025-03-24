@@ -1,0 +1,2 @@
+- Redo background image to be via <Image> rather than css
+- Redo existing pictures in <Image> to render faster

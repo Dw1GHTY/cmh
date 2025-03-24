@@ -24,6 +24,7 @@ const page = () => {
         title="Pofessional Certifications"
         subtitle=""
         path="/certifications.jpg"
+        alt="A healthy man running in the sunset"
       />
       <section className="flex flex-col justify-center items-center w-full md:w-3/5">
         <Article

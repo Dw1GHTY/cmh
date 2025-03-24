@@ -25,6 +25,7 @@ const page = () => {
         title="Biometric Screenings"
         path="/biometric_screening_cover.jpg"
         subtitle=""
+        alt="A picture of a biometric screening"
       />
       <section className="flex flex-col justify-center items-center w-full md:w-3/5">
         <div

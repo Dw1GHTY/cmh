@@ -5,9 +5,15 @@ interface PageImageProps {
   path: string;
   title: string;
   subtitle: string;
+  alt: string;
 }
 
-const PageImage: React.FC<PageImageProps> = ({ path, title, subtitle }) => {
+const PageImage: React.FC<PageImageProps> = ({
+  path,
+  title,
+  subtitle,
+  alt,
+}) => {
   return (
     <div
       className="relative w-full max-w-4xl mx-auto h-auto overflow-hidden 
@@ -15,11 +21,11 @@ const PageImage: React.FC<PageImageProps> = ({ path, title, subtitle }) => {
     >
       <Image
         src={path}
-        alt="sample"
+        alt={alt}
         fill
         style={{ objectFit: "cover", objectPosition: "center" }}
         sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 70vw"
-        priority
+        priority={true}
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center bg-black/20 text-white">
         <h1

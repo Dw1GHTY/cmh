@@ -24,6 +24,7 @@ const page = () => {
         path="/health-coaching.jpg"
         title="Health Coaching Program"
         subtitle=""
+        alt="An image of two happy persons discussing a health coaching program"
       />
       <section className="flex flex-col justify-start bg-white w-full md:w-2/3 h-fit my-3 p-4 rounded-md shadow-md">
         <article>

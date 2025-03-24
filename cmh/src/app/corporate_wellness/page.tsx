@@ -24,6 +24,7 @@ const page = () => {
         path="/corporate_wellness_cover.jpg"
         title="Corporate Wellness Services"
         subtitle="All of our services in one place"
+        alt="A doctor with a stethoscope"
       />
       <div className="flex flex-col justify-center items-center w-full h-fit">
         {/* //!ARTICLE */}

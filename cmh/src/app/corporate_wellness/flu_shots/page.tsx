@@ -26,6 +26,7 @@ const page = () => {
         path="/flu_shot_cover.jpg"
         title="Flu Shot Clinics Made Easy"
         subtitle=""
+        alt="An image of a flu shot"
       />
       <div className="flex flex-col w-full md:w-5/6 my-4 h-fit">
         <section className="flex flex-col size-fit bg-white rounded-md shadow-md p-2">

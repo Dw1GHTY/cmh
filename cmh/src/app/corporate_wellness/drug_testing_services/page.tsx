@@ -24,6 +24,7 @@ const page = () => {
         path="/drug_test_cover.jpg"
         title="Drug Testing Service"
         subtitle=""
+        alt="A picture of a drug test"
       />
       <div className="flex flex-col items-center w-5/6 md:w-1/2 h-fit my-4">
         <Article

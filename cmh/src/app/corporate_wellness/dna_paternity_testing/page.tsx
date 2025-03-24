@@ -24,6 +24,7 @@ const page = () => {
         path="/dna_test_cover.jpeg"
         title="DNA Paternity Testing"
         subtitle=""
+        alt="A DNA paternity test result"
       />
       <div className="flex flex-col w-5/6 md:w-1/2 h-fit my-4">
         <Article

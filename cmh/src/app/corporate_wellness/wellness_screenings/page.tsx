@@ -24,6 +24,7 @@ const page = () => {
         path="/wellness_screening_cover.jpg"
         title="Wellness Screenings"
         subtitle=""
+        alt="Picture of a wellness screening"
       />
       <section className="flex flex-col justify-center items-center w-full md:w-1/2">
         <Article

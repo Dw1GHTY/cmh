@@ -44,8 +44,11 @@ const ImageInfoCard: React.FC<InfoCardProps> = ({
           alt={imageAlt || "Card Image"}
           width={300}
           height={200}
-          loading="lazy"
-          className="object-cover transition-all duration-300 group-hover:brightness-75 group-hover:bg-lightgreen"
+          priority={true}
+          className="
+          rounded-md
+          object-cover transition-all duration-300 
+          group-hover:brightness-75 group-hover:bg-lightgreen"
         />
         <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
       </div>

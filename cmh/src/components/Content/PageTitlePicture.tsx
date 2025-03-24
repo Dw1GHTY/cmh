@@ -23,7 +23,7 @@ const PageTitlePicture: React.FC<PageTitlePictureProps> = (props) => {
         layout="fill"
         objectFit="cover"
         className="absolute inset-0 rounded-md"
-        loading="lazy"
+        priority={true}
       />
 
       {/* Overlay */}
