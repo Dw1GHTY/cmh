@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Complete Mobile Health",
@@ -35,14 +36,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Analytics />
-      <body
-        className="flex flex-col min-h-screen w-screen 
-      bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat bg-slate-200 "
-      >
+      <body className="relative flex flex-col min-h-screen w-screen bg-slate-200">
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/background.jpg"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority={true}
+            quality={80}
+            placeholder="blur"
+            blurDataURL="/background_blurred.jpg"
+          />
+        </div>
+
         <header className="flex h-fit">
           <Navbar />
         </header>
+
         <main className="flex flex-grow">{children}</main>
+
         <Footer />
       </body>
     </html>
