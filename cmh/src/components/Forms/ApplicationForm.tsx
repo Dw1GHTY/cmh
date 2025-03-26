@@ -34,7 +34,7 @@ const formSchema = z.object({
 
 //!FUNCTION
 function sendEmail(data: z.infer<typeof formSchema>) {
-  fetch("https://cmh-test.vercel.app/api/email/apply", {
+  fetch("https://completemobile-health.com/api/email/apply", {
     method: "POST",
     body: JSON.stringify(data),
   })

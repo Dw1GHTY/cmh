@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Complete Mobile Health Is Your Corporate Wellness Company",
     description:
       "Custom corporate wellness programs for your employees. On-site biometric screenings, blood testing, and reporting.",
-    images: "https://cmh-test.vercel.app/cmh_logo_2.jpg",
+    images: "https://completemobile-health.com/cmh_logo_2.jpg",
   },
 };
 

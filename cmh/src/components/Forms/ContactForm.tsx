@@ -28,7 +28,7 @@ const formSchema = z.object({
 });
 //!FUNCTION
 async function sendEmail(data: z.infer<typeof formSchema>) {
-  fetch("https://cmh-test.vercel.app/api/email/contact", {
+  fetch("https://completemobile-health.com/api/email/contact", {
     method: "POST",
     body: JSON.stringify(data),
   })
