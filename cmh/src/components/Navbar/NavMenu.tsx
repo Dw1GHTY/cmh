@@ -16,7 +16,10 @@ const NavMenu: React.FC = () => {
           "DNA Paternity Testing",
         ]}
       />
-      <Separator orientation="vertical" className="bg-slate-500 h-8" />
+      <Separator
+        orientation="vertical"
+        className="bg-green-100 rounded-lg h-8 w-0.5"
+      />
       <Link
         href="/corporate_wellness/flu_shots"
         className="flex justify-center items-center h-10 px-1 font-semibold rounded-md 

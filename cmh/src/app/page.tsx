@@ -3,14 +3,13 @@ import ContactForm from "@/components/Forms/ContactForm";
 import HomeInfoSegment from "@/components/Segments/HomeInfoSegment";
 import PageTitlePicture from "@/components/Content/PageTitlePicture";
 import React from "react";
-import { Separator } from "@/components/ui/separator";
 import PopupDialog from "@/components/Dialog/PopupDialog";
+import Article from "@/components/Content/Article";
+import { Separator } from "@/components/ui/separator";
 
 const Home = () => {
   return (
     <div className="flex justify-center items-center flex-col space-y-3 w-screen">
-      {/*//?About us*/}
-
       {/*//?Home Picture*/}
       <section className="flex w-full h-full items-center justify-center rounded-md my-1">
         <PageTitlePicture
@@ -20,10 +19,23 @@ const Home = () => {
           description="Custom corporate wellness programs for your employees. On-site biometric screenings, blood testing, and reporting."
         />
       </section>
+
+      {/* //? About us */}
+      <section className="flex flex-col w-full md:w-3/5 justify-center items-center">
+        <Article
+          title="About Complete Mobile Health"
+          paragraps={[
+            "Complete Mobile Health is a trusted leader in onsite wellness and medical testing services, proudly serving businesses for over a decade. Our team of experienced healthcare professionals is dedicated to bringing high-quality, convenient, and reliable testing solutions directly to your workplace.",
+            "Founded with the mission of making employee health and safety more accessible, we specialize in mobile services that reduce downtime, increase participation, and ensure compliance with occupational health standards. Whether it’s drug and alcohol testing, biometric screenings, flu shots, or full wellness events—we come to you, fully equipped and ready to serve.",
+            "With years of hands-on experience in the industry, our staff understands the unique needs of businesses across various sectors. From small offices to large industrial sites, we provide tailored solutions that fit your operations and schedule. Our professionalism, efficiency, and commitment to care set us apart in the mobile health space.",
+            "At Complete Mobile Health, we believe that healthier employees make stronger businesses. Let us help you build a healthier, safer workplace—one visit at a time.",
+          ]}
+        />
+      </section>
       <Separator className="w-2/3 md:w-1/2 bg-white h-1 rounded-md mb-2" />
 
       {/* //? Contact us */}
-      <section className="flex flex-col flex-wrap-reverse justify-center items-center my-4">
+      <section className="flex flex-col flex-wrap-reverse justify-center items-center">
         <h2
           className="flex mb-2 
         italic font-semibold text-white text-center text-2xl md:text-6xl p-1"
