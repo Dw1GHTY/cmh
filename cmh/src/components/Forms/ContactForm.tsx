@@ -28,8 +28,11 @@ const formSchema = z.object({
 });
 //!FUNCTION
 async function sendEmail(data: z.infer<typeof formSchema>) {
-  fetch("https://completemobile-health.com/api/email/contact", {
+  fetch("https://www.completemobile-health.com/api/email/contact", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(data),
   })
     .then((res) => res.json())
@@ -42,7 +45,7 @@ async function sendEmail(data: z.infer<typeof formSchema>) {
     });
 }
 async function onSubmit(values: z.infer<typeof formSchema>) {
-  console.log(values);
+  // console.log(values);
   try {
     await sendEmail(values);
   } catch (err) {

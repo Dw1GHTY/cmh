@@ -34,8 +34,11 @@ const formSchema = z.object({
 
 //!FUNCTION
 function sendEmail(data: z.infer<typeof formSchema>) {
-  fetch("https://completemobile-health.com/api/email/apply", {
+  fetch("https://www.completemobile-health.com/api/email/apply", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(data),
   })
     .then((res) => res.json())
@@ -47,7 +50,7 @@ function sendEmail(data: z.infer<typeof formSchema>) {
     });
 }
 function onSubmit(values: z.infer<typeof formSchema>) {
-  console.log(values);
+  // console.log(values);
   try {
     sendEmail(values);
   } catch (err) {
