@@ -34,6 +34,7 @@ export async function POST(request: NextRequest) {
     await sendMailPromise();
     return NextResponse.json({ message: "Email sent!" });
   } catch (e) {
+    console.error("Failed to send email:", e); // <--- LOG ERROR
     return NextResponse.json({ error: e }, { status: 500 });
   }
 }
