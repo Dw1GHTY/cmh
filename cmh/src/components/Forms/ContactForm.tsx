@@ -44,22 +44,15 @@ async function sendEmail(data: z.infer<typeof formSchema>) {
     const json = await res.json();
 
     if (!res.ok) {
-      throw new Error(json.error || "Unknown server error");
+      const errorData = await res
+        .json()
+        .catch(() => ({ error: "Unknown error" }));
+      throw new Error(errorData.error || `HTTP error! status: ${res.status}`);
     }
-
-    alert(json.message || "Email sent successfully");
+    return await json;
   } catch (err) {
     console.error("Client error sending email:", err);
     alert(`Error: ${err || "Unknown error"}`);
-  }
-}
-async function onSubmit(values: z.infer<typeof formSchema>) {
-  // console.log(values);
-  try {
-    await sendEmail(values);
-  } catch (err) {
-    alert(`Error sending email!, error: ${err}`);
-  } finally {
   }
 }
 
@@ -74,6 +67,16 @@ const ContactForm = () => {
     },
   });
 
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      await sendEmail(values);
+      alert("Email sent succesfully!");
+      form.reset();
+    } catch (err) {
+      alert(`Error sending email!, error: ${err}`);
+    } finally {
+    }
+  }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -114,8 +117,12 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="bg-green-900 text-white">
-          Submit
+        <Button
+          type="submit"
+          className="bg-green-900 text-white"
+          disabled={form.formState.isSubmitting}
+        >
+          {form.formState.isSubmitting ? "Sending..." : "Submit"}
         </Button>
       </form>
     </Form>
