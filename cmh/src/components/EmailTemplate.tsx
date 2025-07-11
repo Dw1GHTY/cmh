@@ -25,6 +25,7 @@ const EmailTemplate: React.FC<EmailTemplateProps> = (props) => {
           color: "#2c3e50",
           borderBottom: "2px solid #3498db",
           paddingBottom: "10px",
+          textAlign: "center",
         }}
       >
         New Email from Complete Mobile Health Customer
