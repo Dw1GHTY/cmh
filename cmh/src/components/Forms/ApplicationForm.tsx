@@ -33,24 +33,34 @@ const formSchema = z.object({
 });
 
 //!FUNCTION
-function sendEmail(data: z.infer<typeof formSchema>) {
-  fetch("https://www.completemobile-health.com/api/email/apply", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((res) => res.json())
-    .then((response) => {
-      alert(response.message);
-    })
-    .catch((err) => {
-      alert(err);
+async function sendEmail(data: z.infer<typeof formSchema>) {
+  try {
+    const res = await fetch("/api/email/apply", {
+      method: "POST", // Make sure this is POST
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        submittedName: data.name,
+        submittedSurname: data.surname,
+        submittedEmail: data.email,
+        submittedMessage: data.message,
+      }),
     });
+
+    const json = await res.json();
+
+    if (!res.ok) {
+      throw new Error(json.error || "Unknown server error");
+    }
+
+    alert(json.message || "Email sent successfully");
+  } catch (err) {
+    console.error("Client error sending email:", err);
+    alert(`Error: ${err || "Unknown error"}`);
+  }
 }
 function onSubmit(values: z.infer<typeof formSchema>) {
-  // console.log(values);
   try {
     sendEmail(values);
   } catch (err) {
